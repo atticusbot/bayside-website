@@ -1,4 +1,9 @@
 import type { Metadata } from 'next'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Link from 'next/link'
+import AuditForm from './audit-form'
 
 export const metadata: Metadata = {
   title: 'Bayside AI — AI for Ocean City Hotels',
@@ -22,6 +27,20 @@ const services = [
   { title: 'Local & AI Search', desc: 'Google Business Profile optimization, local SEO, and GEO — so your hotel shows up when guests ask AI assistants.' },
   { title: 'Guest Communication', desc: 'Pre-arrival, welcome, and follow-up email automation that drives reviews and repeat bookings.' },
 ]
+
+function getRecentPosts(count = 3) {
+  const contentDir = path.join(process.cwd(), 'src/content/blog')
+  if (!fs.existsSync(contentDir)) return []
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.mdx'))
+  return files
+    .map(file => {
+      const slug = file.replace(/\.mdx$/, '')
+      const { data } = matter(fs.readFileSync(path.join(contentDir, file), 'utf8'))
+      return { slug, title: data.title as string, excerpt: data.excerpt as string, date: data.date as string }
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, count)
+}
 
 export default function Home() {
   return (
@@ -175,6 +194,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── BLOG PREVIEW ── */}
+      {(() => {
+        const posts = getRecentPosts(3)
+        if (posts.length === 0) return null
+        return (
+          <section className="px-6 py-24 md:py-32 bg-ocean-dark">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ intel ]</div>
+              <div className="flex items-end justify-between mb-16">
+                <h2 className="font-mono text-display-lg font-bold text-foam">From the field</h2>
+                <Link href="/blog" className="font-mono text-sm text-bio/60 hover:text-bio transition-colors">
+                  All posts →
+                </Link>
+              </div>
+              <div className="grid gap-px bg-bio/10 md:grid-cols-3">
+                {posts.map(post => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group block bg-ocean-dark p-8 transition-all duration-300 hover:bg-ocean-light">
+                    <div className="mb-4 h-px w-8 bg-bio/40 transition-all duration-300 group-hover:w-16 group-hover:bg-bio"/>
+                    <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-bio/50 mb-3">{post.date}</p>
+                    <h3 className="font-mono text-base font-bold text-foam leading-snug mb-4 group-hover:text-bio transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="font-sans text-sm leading-relaxed text-foam/50 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-6 font-mono text-xs text-bio/50 group-hover:text-bio transition-colors">
+                      Read more →
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
+
       {/* ── AUDIT FORM ── */}
       <section id="audit" className="px-6 py-24 md:py-32 bg-ocean-mid">
         <div className="mx-auto max-w-lg">
@@ -186,31 +241,7 @@ export default function Home() {
             We&rsquo;ll pull your reviews, check your search visibility, and tell you
             exactly what to fix — for free. Delivered in 48 hours.
           </p>
-          <form action="mailto:tyler@baysideai.co" method="POST" encType="text/plain" className="grid gap-8">
-            {[
-              { name: 'name', label: 'Your name', type: 'text' },
-              { name: 'hotel', label: 'Hotel name', type: 'text' },
-              { name: 'email', label: 'Email address', type: 'email' },
-            ].map(field => (
-              <div key={field.name} className="group relative">
-                <label className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
-                  {field.label}
-                </label>
-                <input
-                  type={field.type}
-                  name={field.name}
-                  required
-                  className="w-full bg-transparent border-0 border-b border-bio/20 pb-3 pt-1 font-sans text-foam placeholder:text-foam/20 focus:border-bio focus:outline-none transition-colors duration-200 group-hover:border-bio/40"
-                />
-              </div>
-            ))}
-            <button type="submit" className="mt-4 bg-bio px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.15em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim hover:shadow-[0_8px_30px_rgba(61,255,160,0.2)]">
-              Get My Free Audit →
-            </button>
-            <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/25 text-center">
-              No commitment · No sales call · Just data
-            </p>
-          </form>
+          <AuditForm />
         </div>
       </section>
 
