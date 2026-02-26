@@ -40,5 +40,17 @@ export async function POST(req: Request) {
     }
   }
 
+  // Notify #pipeline via Discord webhook
+  const webhookUrl = process.env.DISCORD_PIPELINE_WEBHOOK
+  if (webhookUrl) {
+    await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: `🎯 **New Audit Request**\n**Name:** ${name}\n**Hotel:** ${hotel}\n**Email:** ${email}`,
+      }),
+    }).catch(() => {}) // non-blocking — don't fail the request if Discord is down
+  }
+
   return NextResponse.json({ success: true })
 }
