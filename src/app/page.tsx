@@ -3,10 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import AuditForm from './audit-form'
-
-const Waves = dynamic(() => import('@/components/Waves'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Bayside AI — AI for Ocean City, MD Businesses',
@@ -75,17 +72,7 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-20">
-        {/* Animated ocean wave background */}
-        <Waves
-          lineColor="rgba(61,255,160,0.07)"
-          backgroundColor="transparent"
-          waveSpeedX={0.008}
-          waveSpeedY={0.003}
-          waveAmpX={40}
-          waveAmpY={20}
-          xGap={22}
-          yGap={52}
-        />
+
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Section label */}
