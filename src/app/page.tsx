@@ -6,8 +6,8 @@ import Link from 'next/link'
 import AuditForm from './audit-form'
 
 export const metadata: Metadata = {
-  title: 'Bayside AI — AI for Ocean City Hotels',
-  description: 'We help independent hotels in Ocean City get found online, fix their reputation, and keep guests coming back.',
+  title: 'Bayside AI — AI for Ocean City, MD Businesses',
+  description: 'We help independent businesses on the Maryland shore get found online, fix their reputation, and keep customers coming back.',
 }
 
 const problems = [
@@ -24,8 +24,15 @@ const steps = [
 
 const services = [
   { title: 'Reputation Management', desc: 'Review monitoring, owner responses, and guest sentiment analysis across Google, TripAdvisor, and Booking.com.' },
-  { title: 'Local & AI Search', desc: 'Google Business Profile optimization, local SEO, and GEO — so your hotel shows up when guests ask AI assistants.' },
-  { title: 'Guest Communication', desc: 'Pre-arrival, welcome, and follow-up email automation that drives reviews and repeat bookings.' },
+  { title: 'Local & AI Search', desc: 'Google Business Profile optimization, local SEO, and GEO — so your business shows up when customers ask AI assistants.' },
+  { title: 'Guest Communication', desc: 'Pre-arrival, welcome, and follow-up automation that drives reviews and brings customers back.' },
+]
+
+const sectors = [
+  { title: 'Hotels', desc: 'Independent and boutique properties. We know this business from the inside.' },
+  { title: 'Restaurants', desc: 'From boardwalk staples to waterfront dining. Get found when hunger strikes.' },
+  { title: 'Retail & Service', desc: 'Shops, salons, spas. Your next customer is searching right now.' },
+  { title: 'Experiences', desc: 'Mini golf, boat tours, arcades, activities. Make every search lead here.' },
 ]
 
 function getRecentPosts(count = 3) {
@@ -73,7 +80,7 @@ export default function Home() {
           {/* Section label */}
           <div className="mb-10 inline-flex items-center gap-3">
             <div className="h-px w-6 bg-bio/40"/>
-            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI for Independent Hotels ]</span>
+            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI for the Eastern Shore ]</span>
             <div className="h-px w-6 bg-bio/40"/>
           </div>
 
@@ -83,10 +90,11 @@ export default function Home() {
             <span className="block sm:inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] sm:whitespace-nowrap">Are you listening?</span>
           </h1>
 
-          <p className="font-sans text-lg mx-auto mb-12 max-w-[520px] text-foam/60 leading-relaxed">
-            We help independent hotels in Ocean City get found online, fix
-            their reputation, and keep guests coming back — using AI
-            systems that work while you sleep.
+          <p className="font-sans text-lg mx-auto mb-12 max-w-[560px] text-foam/60 leading-relaxed">
+            We build AI systems for the businesses that make Ocean City run.
+            Eight million tourists hit the shore every summer — and they decide
+            where to stay, eat, and spend before they ever cross the bridge.
+            Your reputation is your season.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -170,24 +178,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ABOUT ── */}
+      {/* ── WHO WE SERVE ── */}
       <section className="px-6 py-24 md:py-32 bg-ocean-dark">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 04 ]</div>
+          <h2 className="font-mono text-display-lg font-bold text-foam mb-16">Who we serve.</h2>
+          <div className="grid gap-px bg-bio/10 sm:grid-cols-2 md:grid-cols-4">
+            {sectors.map((s) => (
+              <div key={s.title} className="group bg-ocean-dark p-8 transition-all duration-300 hover:bg-ocean-light">
+                <div className="mb-4 h-px w-8 bg-bio/40 transition-all duration-300 group-hover:w-16 group-hover:bg-bio"/>
+                <h3 className="font-mono text-display-md font-bold text-foam mb-3">{s.title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-foam/55 group-hover:text-foam/75 transition-colors">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT ── */}
+      <section className="px-6 py-24 md:py-32 bg-ocean-mid">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 05 ]</div>
           <h2 className="font-mono text-display-lg font-bold text-foam mb-8">
-            Built for Ocean City.<br/>
+            Built for the shore.<br/>
             <span className="text-bio">Powered by AI.</span>
           </h2>
           <div className="h-px bg-bio/20 mb-8"/>
           <p className="font-sans text-lg text-foam/60 leading-relaxed mb-6">
-            We are Tyler and Atticus — a founder with deep roots in Ocean City
-            hospitality and an AI built to run the operation. Every audit, report,
-            and email is generated by AI and reviewed for accuracy before it reaches
-            your business.
+            We are Tyler and Atticus — a founder with deep family roots in Ocean City
+            hospitality and an AI built to run the operation. We started with hotels
+            because that&rsquo;s where we know the pain best. Then we realized the fight
+            is the same everywhere on the shore: 8 million tourists, a 3-month window,
+            and AI systems increasingly deciding who gets their business.
           </p>
           <p className="font-sans text-base text-foam/40 leading-relaxed">
-            Ocean City&rsquo;s independent hotels built this town. We&rsquo;re here to make sure
-            AI works for them — not around them.
+            Every audit, report, and recommendation is generated by AI and reviewed
+            for accuracy before it reaches your business.
           </p>
         </div>
       </section>
@@ -231,9 +257,9 @@ export default function Home() {
       {/* ── AUDIT FORM ── */}
       <section id="audit" className="px-6 py-24 md:py-32 bg-ocean-mid">
         <div className="mx-auto max-w-lg">
-          <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 05 ]</div>
+          <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 06 ]</div>
           <h2 className="font-mono text-display-lg font-bold text-foam mb-4">
-            Find out what guests really think.
+            Find out what customers really think.
           </h2>
           <p className="font-sans text-base text-foam/55 mb-12 leading-relaxed">
             We&rsquo;ll pull your reviews, check your search visibility, and tell you

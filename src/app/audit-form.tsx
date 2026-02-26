@@ -11,7 +11,7 @@ export default function AuditForm() {
     const form = e.currentTarget
     const data = {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      hotel: (form.elements.namedItem('hotel') as HTMLInputElement).value,
+      business: (form.elements.namedItem('business') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
     }
     try {
@@ -41,7 +41,7 @@ export default function AuditForm() {
     <form onSubmit={handleSubmit} className="grid gap-8">
       {[
         { name: 'name', label: 'Your name', type: 'text' },
-        { name: 'hotel', label: 'Hotel name', type: 'text' },
+        { name: 'business', label: 'Business name', type: 'text' },
         { name: 'email', label: 'Email address', type: 'email' },
       ].map(field => (
         <div key={field.name} className="group relative">
