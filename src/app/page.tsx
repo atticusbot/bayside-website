@@ -80,7 +80,7 @@ export default function Home() {
           {/* Headline with word-level highlight */}
           <h1 className="font-mono text-display-xl font-bold mb-10">
             <span className="block text-foam mb-6 leading-[1.1]">Your guests are talking.</span>
-            <span className="inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] whitespace-nowrap">Are you listening?</span>
+            <span className="block sm:inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] sm:whitespace-nowrap">Are you listening?</span>
           </h1>
 
           <p className="font-sans text-lg mx-auto mb-12 max-w-[520px] text-foam/60 leading-relaxed">

@@ -15,6 +15,11 @@ body {
   color: #e8f5f0;
   font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 ::selection {
