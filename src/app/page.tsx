@@ -59,9 +59,14 @@ export default function Home() {
             <span className="font-mono text-lg font-bold text-foam tracking-tight">Bayside AI</span>
             <span className="hidden sm:inline text-label font-mono text-bio/60 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
-          <a href="#audit" className="border border-bio/40 px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
-            Free Audit
-          </a>
+          <div className="flex items-center gap-3">
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/50 transition-all duration-200 hover:text-bio">
+              Book a Call
+            </button>
+            <a href="#audit" className="border border-bio/40 px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+              Free Audit
+            </a>
+          </div>
         </div>
       </nav>
 
