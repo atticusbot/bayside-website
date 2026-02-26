@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const spaceMono = Space_Mono({
@@ -16,13 +17,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Bayside AI — AI Consulting for Independent Hotels in Ocean City, MD",
+  title: "Bayside AI — AI for Ocean City, MD Businesses",
   description:
-    "We help independent hotels in Ocean City get found online, fix their reputation, and keep guests coming back — using AI systems that work while you sleep.",
+    "We manage your online reputation and visibility so you can focus on your guests. Built for Ocean City's hotels, restaurants, shops, and experiences.",
   openGraph: {
-    title: "Bayside AI — AI Consulting for Independent Hotels",
+    title: "Bayside AI — AI for Ocean City, MD Businesses",
     description:
-      "Get found online, fix your reputation, and keep guests coming back with AI-powered systems built for Ocean City hotels.",
+      "We manage your online reputation and visibility so you can focus on your guests. Eight million tourists. One shore season. Your reputation is your season.",
     type: "website",
   },
 };
@@ -34,7 +35,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceMono.variable} ${plusJakarta.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Script id="cal-embed" strategy="afterInteractive">{`
+          (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+              let cal = C.Cal; let ar = arguments;
+              if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+              if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; }
+              p(cal, ar);
+            };
+          })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", { origin: "https://cal.com" });
+          Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#3dffa0" } } });
+        `}</Script>
+      </body>
     </html>
   );
 }

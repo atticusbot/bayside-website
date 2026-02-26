@@ -101,6 +101,11 @@ export default function Home() {
             <a href="#audit" className="bg-bio px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim hover:shadow-[0_8px_30px_rgba(61,255,160,0.25)]">
               Get Your Free Audit
             </a>
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+              Book a Call
+            </button>
+          </div>
+          <div className="mt-4">
             <a href="#how-it-works" className="font-mono text-sm text-foam/40 transition hover:text-foam/70">
               see how it works →
             </a>
@@ -195,6 +200,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── MID-PAGE CTA STRIP ── */}
+      <section className="px-6 py-14 bg-ocean-light border-y border-bio/10">
+        <div className="mx-auto max-w-4xl flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+          <p className="font-mono text-display-md font-bold text-foam text-center sm:text-left">
+            Ready to see what&rsquo;s holding you back?
+          </p>
+          <div className="flex flex-col gap-3 sm:flex-row shrink-0">
+            <a href="#audit" className="bg-bio px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim text-center">
+              Get Free Audit
+            </a>
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+              Book a Call
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* ── ABOUT ── */}
       <section className="px-6 py-24 md:py-32 bg-ocean-mid">
         <div className="mx-auto max-w-3xl">
@@ -266,6 +288,12 @@ export default function Home() {
             exactly what to fix — for free. Delivered in 48 hours.
           </p>
           <AuditForm />
+          <div className="mt-10 pt-8 border-t border-bio/10 text-center">
+            <p className="font-mono text-sm text-foam/40 mb-3">Prefer to talk first?</p>
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="font-mono text-sm text-bio/60 hover:text-bio transition-colors underline underline-offset-4">
+              Book a 15-min call →
+            </button>
+          </div>
         </div>
       </section>
 
