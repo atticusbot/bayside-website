@@ -78,11 +78,9 @@ export default function Home() {
           </div>
 
           {/* Headline with word-level highlight */}
-          <h1 className="font-mono text-display-xl font-bold text-foam mb-4 leading-[1.05]">
-            Your guests are talking.
-          </h1>
-          <h1 className="font-mono text-display-xl font-bold mb-10 leading-[1.05]">
-            <span className="bg-bio/15 border border-bio/30 px-3 py-1 text-bio">Are you listening?</span>
+          <h1 className="font-mono text-display-xl font-bold mb-10">
+            <span className="block text-foam mb-6 leading-[1.1]">Your guests are talking.</span>
+            <span className="inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] whitespace-nowrap">Are you listening?</span>
           </h1>
 
           <p className="font-sans text-lg mx-auto mb-12 max-w-[520px] text-foam/60 leading-relaxed">
