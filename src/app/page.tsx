@@ -3,7 +3,10 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import AuditForm from './audit-form'
+
+const Waves = dynamic(() => import('@/components/Waves'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Bayside AI — AI for Ocean City, MD Businesses',
@@ -72,14 +75,17 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-20">
-        {/* Organic wave graphic */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-[0.06]" aria-hidden="true">
-          <svg viewBox="0 0 400 800" className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-            <path d="M400 0 Q200 100 350 200 Q500 300 200 400 Q-100 500 300 600 Q500 700 200 800" stroke="#3dffa0" strokeWidth="2" fill="none"/>
-            <path d="M400 50 Q150 150 300 250 Q450 350 150 450 Q-50 550 250 650 Q450 750 150 850" stroke="#3dffa0" strokeWidth="1" fill="none"/>
-            <path d="M350 0 Q100 120 280 220 Q460 320 180 440 Q-80 520 280 640" stroke="#c8a96e" strokeWidth="0.5" fill="none" opacity="0.5"/>
-          </svg>
-        </div>
+        {/* Animated ocean wave background */}
+        <Waves
+          lineColor="rgba(61,255,160,0.07)"
+          backgroundColor="transparent"
+          waveSpeedX={0.008}
+          waveSpeedY={0.003}
+          waveAmpX={40}
+          waveAmpY={20}
+          xGap={22}
+          yGap={52}
+        />
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Section label */}
