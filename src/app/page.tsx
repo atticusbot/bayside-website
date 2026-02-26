@@ -91,10 +91,10 @@ export default function Home() {
           </h1>
 
           <p className="font-sans text-lg mx-auto mb-12 max-w-[560px] text-foam/60 leading-relaxed">
-            We build AI systems for the businesses that make Ocean City run.
-            Eight million tourists hit the shore every summer — and they decide
-            where to stay, eat, and spend before they ever cross the bridge.
-            Your reputation is your season.
+            We manage your online reputation and visibility so you can focus
+            on your guests. Eight million tourists hit the shore every summer —
+            and they decide where to stay, eat, and spend before they ever
+            cross the bridge. Your reputation is your season.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
