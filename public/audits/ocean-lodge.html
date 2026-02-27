@@ -251,6 +251,45 @@
       line-height: 1.5;
     }
     .service-bullets li:last-child { border-bottom: none; }
+
+    /* Accordion */
+    .accordion {
+      margin-top: 12px;
+    }
+    .accordion summary {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #3dffa0;
+      background: #0a1e1a;
+      padding: 8px 14px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+    }
+    .accordion summary::-webkit-details-marker { display: none; }
+    .accordion summary::before {
+      content: "▶";
+      font-size: 8px;
+      transition: transform 0.2s;
+    }
+    .accordion[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .accordion .service-bullets {
+      margin: 0;
+      padding: 0 0 4px 0;
+      border: 1px solid #e8efed;
+      border-top: none;
+    }
+    .accordion .service-bullets li {
+      padding-left: 28px;
+    }
+
     .service-bullets li::before {
       content: "→";
       position: absolute;
@@ -562,13 +601,13 @@
           </div>
           <div class="service-body">
             <p class="service-desc">Your Google profile is the first thing a potential guest sees. Right now it's incomplete and silent. We rebuild it from the ground up and keep it active.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li>25–30 owner-uploaded photos integrated from the professional shoot (exterior, rooms, amenities, boardwalk proximity)</li>
               <li>Property description built around your strongest assets: 2 blocks from the boardwalk, kitchen amenities, value pricing, direct booking advantage</li>
               <li>All amenity tags, hours, policies, direct booking link confirmed and accurate</li>
               <li>Q&amp;A section seeded with common guest questions</li>
               <li>Review responses — every review from the past 12 months responded to, plus all new reviews on an ongoing basis. Drafted by us, approved by you before posting.</li>
-            </ul>
+            </ul></details>
             <div class="note-box">
               <strong>On review responses:</strong> We go back one full year — recent enough to matter, targeted enough to look human. All new reviews get a response within 48 hours on an ongoing basis. Responses are written individually; no templates.
             </div>
@@ -584,12 +623,12 @@
           </div>
           <div class="service-body">
             <p class="service-desc">Ocean Lodge currently has zero owner-uploaded photos on Google. Travelers make booking decisions on visuals first. A single professional shoot produces assets that work across every channel — Google, the new website, OTA listings, Instagram — for years.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li>Full property shoot: exterior, lobby, room types (North + South + Mallard), amenities, parking, views</li>
               <li>Boardwalk and location context shots — lean into the 2-block proximity advantage</li>
               <li>Lifestyle shots for social and ad creative</li>
               <li>Delivered as an organized asset library ready to deploy across all channels</li>
-            </ul>
+            </ul></details>
           </div>
         </div>
 
@@ -602,14 +641,14 @@
           </div>
           <div class="service-body">
             <p class="service-desc">A fresh, standalone website for the Ocean Lodge brand — minimal, beach-kitschy cozy, nothing like the generic OC hotel template. Built for direct bookings, optimized for Google and AI search, and structured to carry the full brand family.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li><strong>Brand architecture:</strong> Ocean Lodge North, Ocean Lodge South, and Mallard Apartments nested under one domain with distinct pages — plus a "sister property" link to Surf Inn Suites</li>
               <li><strong>Direct booking:</strong> Prominent, unavoidable booking link with a visible discount for booking direct vs. OTA ("Book direct. Best rate guaranteed.")</li>
               <li><strong>Crystal-clear policies:</strong> Dedicated policies page addressing parking, deposits, check-in/out, and cancellation — the exact sources of contention in current reviews. No more surprises.</li>
               <li><strong>SEO foundation:</strong> Proper on-page structure, fast load times, mobile-first, Core Web Vitals optimized</li>
               <li><strong>GEO-ready structure:</strong> Hotel schema markup, FAQ pages with structured Q&amp;A (feeds directly into Google AI Overviews and ChatGPT citations), consistent NAP across every page</li>
               <li><strong>Design direction:</strong> Fresh and minimal with beach-kitschy warmth — warm sand tones, ocean references, handwritten-feel accents. Feels like a place worth staying, not a booking engine.</li>
-            </ul>
+            </ul></details>
           </div>
         </div>
 
@@ -622,11 +661,11 @@
           </div>
           <div class="service-body">
             <p class="service-desc">Three automated emails that do real work: reduce pre-arrival misunderstandings, make guests feel welcomed on arrival, and turn happy guests into reviewers at exactly the right moment.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li><strong>Booking confirmation:</strong> Personalized, warm, practical. Explicitly covers parking policy, deposit terms, and check-in process — the exact issues generating bad reviews today. Sets accurate expectations before guests arrive.</li>
               <li><strong>Day of arrival:</strong> Welcome message with check-in details, local recommendations, and a reminder of direct booking perks for their next visit</li>
               <li><strong>Post-departure:</strong> Thank you note with a direct ask for a Google, Booking.com, or TripAdvisor review — with a discount code for booking direct on their next stay. Sent 24 hours after checkout while the experience is fresh.</li>
-            </ul>
+            </ul></details>
             <div class="note-box">
               The post-departure email is the engine behind review volume growth. A consistent, well-timed ask to every guest — automated — is how you go from 5 reviews a month to 20+.
             </div>
@@ -642,11 +681,11 @@
           </div>
           <div class="service-body">
             <p class="service-desc">Consistent social and blog content that keeps Ocean Lodge visible and alive online year-round — not just in season. Planned, written, and posted by us.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li><strong>Social media (Instagram + Facebook):</strong> 3 posts per week — mix of property photos, local OC content, guest spotlights, seasonal promotions, and direct booking reminders</li>
               <li><strong>Blog (2 posts/month):</strong> SEO-targeted articles that answer real travel questions ("Best oceanfront hotels in Ocean City," "What to do in OC with kids," "Hotels near the Ocean City boardwalk") — drives organic search traffic and feeds AI search citations</li>
               <li>All content reviewed and approved by you before publishing</li>
-            </ul>
+            </ul></details>
           </div>
         </div>
 
@@ -659,12 +698,12 @@
           </div>
           <div class="service-body">
             <p class="service-desc">A managed ad campaign running through the full summer season — the period where every dollar of visibility translates directly to bookings.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li><strong>Google Search Ads:</strong> Target high-intent searches ("hotels Ocean City MD," "ocean city boardwalk hotels," "ocean city vacation rentals") and capture travelers actively looking to book</li>
               <li><strong>Instagram / Meta Ads:</strong> Visual campaigns using professional photography — retargeting website visitors and reaching new audiences in feeder markets (DC, Philadelphia, Baltimore, Pittsburgh)</li>
               <li>Monthly reporting: impressions, clicks, booking conversions, cost per acquisition</li>
               <li>Campaign creative produced by us; strategy adjusted monthly based on performance data</li>
-            </ul>
+            </ul></details>
             <div class="note-box">
               <strong>Ad spend is separate</strong> from the management fee and billed directly to your account. We recommend $600–1,000/month during peak season (May–September). We manage the budget allocation, targeting, and optimization.
             </div>
@@ -680,7 +719,7 @@
           </div>
           <div class="service-body">
             <p class="service-desc">Every month, a clear picture of where you stand and what's moving.</p>
-            <ul class="service-bullets">
+            <details class="accordion"><summary>View details</summary><ul class="service-bullets">
               <li>Review volume + star rating trend (Google, TripAdvisor, Booking.com, Expedia)</li>
               <li>Competitive benchmarking vs. 3 comparable OC properties</li>
               <li>Website traffic, direct booking conversions, and booking source breakdown</li>
@@ -688,7 +727,7 @@
               <li>Social reach and engagement</li>
               <li>Ad campaign performance: spend, impressions, bookings attributed</li>
               <li>Recommended focus areas for the coming month</li>
-            </ul>
+            </ul></details>
           </div>
         </div>
 
