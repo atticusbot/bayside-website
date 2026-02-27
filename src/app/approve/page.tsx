@@ -28,7 +28,7 @@ function ApproveForm() {
     <div style={{ minHeight:'100vh', background:'#0a1e1a', display:'flex', alignItems:'center', justifyContent:'center', padding:'40px 20px' }}>
       <div style={{ background:'#fff', maxWidth:'520px', width:'100%', padding:'48px 40px', textAlign:'center' }}>
         <div style={{ fontFamily:'Space Mono, monospace', fontSize:'11px', letterSpacing:'0.2em', color:'#3dffa0', background:'#0a1e1a', display:'inline-block', padding:'4px 12px', marginBottom:'24px' }}>[ CONFIRMED ]</div>
-        <h1 style={{ fontFamily:'Space Mono, monospace', fontSize:'22px', color:'#0a1e1a', marginBottom:'16px', lineHeight:1.3 }}>You're in. We'll take it from here.</h1>
+        <h1 style={{ fontFamily:'Space Mono, monospace', fontSize:'22px', color:'#0a1e1a', marginBottom:'16px', lineHeight:1.3 }}>YouYou&apos;re in. We&apos;ll take it from here.apos;re in. WeYou&apos;re in. We&apos;ll take it from here.apos;ll take it from here.</h1>
         <p style={{ fontSize:'15px', color:'#3d5a54', lineHeight:1.7 }}>Tyler will be in touch within 24 hours to send over the service agreement and get your kickoff scheduled.</p>
         <p style={{ fontSize:'13px', color:'#6b8a82', marginTop:'24px' }}>Questions? Email <a href="mailto:tyler@baysideai.co" style={{ color:'#0a1e1a' }}>tyler@baysideai.co</a></p>
       </div>
@@ -41,8 +41,8 @@ function ApproveForm() {
         {/* Header */}
         <div style={{ marginBottom:'32px' }}>
           <div style={{ fontFamily:'Space Mono, monospace', fontSize:'11px', letterSpacing:'0.2em', color:'#3dffa0', background:'#0a1e1a', display:'inline-block', padding:'4px 12px', marginBottom:'20px' }}>[ BAYSIDE AI ]</div>
-          <h1 style={{ fontFamily:'Space Mono, monospace', fontSize:'22px', color:'#0a1e1a', lineHeight:1.3, marginBottom:'12px' }}>Let's get started.</h1>
-          <p style={{ fontSize:'15px', color:'#3d5a54', lineHeight:1.7 }}>Confirm your details below and we'll send over the service agreement within 24 hours.</p>
+          <h1 style={{ fontFamily:'Space Mono, monospace', fontSize:'22px', color:'#0a1e1a', lineHeight:1.3, marginBottom:'12px' }}>Let&apos;s get started.</h1>
+          <p style={{ fontSize:'15px', color:'#3d5a54', lineHeight:1.7 }}>Confirm your details below and we&apos;ll send over the service agreement within 24 hours.</p>
         </div>
 
         <form onSubmit={handleSubmit} style={{ display:'flex', flexDirection:'column', gap:'20px' }}>
