@@ -2,25 +2,8 @@
 
 import { useState } from 'react'
 
-const PAIN_OPTIONS = [
-  'Responding to reviews',
-  'Getting found online / AI search',
-  'Social media & content',
-  'Guest emails & communication',
-  'Direct bookings / reducing OTA fees',
-  'Something else',
-]
-
 export default function AuditForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
-  const [painPoints, setPainPoints] = useState<string[]>([])
-
-  function togglePain(option: string) {
-    setPainPoints(prev =>
-      prev.includes(option) ? prev.filter(p => p !== option) : [...prev, option]
-    )
-  }
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setStatus('loading')
@@ -29,7 +12,7 @@ export default function AuditForm() {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
       business: (form.elements.namedItem('business') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      painPoints: painPoints.join(', '),
+      painPoints: (form.elements.namedItem('painPoints') as HTMLTextAreaElement)?.value || '',
     }
     try {
       const res = await fetch('/api/audit-request', {
@@ -75,26 +58,17 @@ export default function AuditForm() {
         </div>
       ))}
 
-      <div>
-        <label className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-3">
-          Where would you most want help? <span className="text-foam/30 normal-case tracking-normal">(optional)</span>
+      <div className="group relative">
+        <label className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
+          If I could automate one part of my week it would be: <span className="text-foam/30 normal-case tracking-normal">(optional)</span>
         </label>
-        <div className="grid grid-cols-1 gap-2">
-          {PAIN_OPTIONS.map(option => (
-            <button
-              key={option}
-              type="button"
-              onClick={() => togglePain(option)}
-              className={`text-left px-4 py-2.5 font-sans text-sm border transition-all duration-150 ${
-                painPoints.includes(option)
-                  ? 'border-coral bg-coral/10 text-coral'
-                  : 'border-bio/15 text-foam/50 hover:border-bio/40 hover:text-foam/75'
-              }`}
-            >
-              {painPoints.includes(option) ? '✓ ' : ''}{option}
-            </button>
-          ))}
-        </div>
+        <textarea
+          name="painPoints"
+          rows={3}
+          disabled={status === 'loading'}
+          className="w-full bg-transparent border border-bio/20 p-3 font-sans text-foam text-sm placeholder:text-foam/20 focus:border-bio focus:outline-none transition-colors duration-200 group-hover:border-bio/40 disabled:opacity-50 resize-none"
+          placeholder="e.g. responding to Google reviews, posting on social media..."
+        />
       </div>
 
       <button
