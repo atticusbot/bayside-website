@@ -37,6 +37,13 @@ export default function RootLayout({
     <html lang="en" className={`${spaceMono.variable} ${plusJakarta.variable}`}>
       <body className="font-sans antialiased">
         {children}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-J9N5HXVJCW" strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-J9N5HXVJCW');
+        `}</Script>
         <Script id="cal-embed" strategy="afterInteractive">{`
           (function (C, A, L) {
             let p = function (a, ar) { a.q.push(ar); };
