@@ -1,0 +1,34 @@
+<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ══ NAUTICAL CHART MARK — Logo 3 ══ -->
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="28" stroke="#1a3352" stroke-width="1" fill="none"/>
+  <!-- Radar/sweep arc (coral) — north-east quadrant -->
+  <path d="M 32 32 L 32 6 A 26 26 0 0 1 56 28 Z" fill="#ff7a54" opacity="0.13"/>
+  <path d="M 32 6 A 26 26 0 0 1 56 28" stroke="#ff7a54" stroke-width="1.5" fill="none" opacity="0.65"/>
+  <!-- Inner ring -->
+  <circle cx="32" cy="32" r="16" stroke="#1a4a7a" stroke-width="1" fill="none" opacity="0.6"/>
+  <!-- Bay/coastline curve (blue) — the water element -->
+  <path d="M 10 44 Q 20 32 32 38 Q 44 44 54 36" stroke="#3d9eff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Cardinal crosshairs -->
+  <line x1="32" y1="4"  x2="32" y2="18" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
+  <line x1="32" y1="46" x2="32" y2="60" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
+  <line x1="4"  y1="32" x2="18" y2="32" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
+  <line x1="46" y1="32" x2="60" y2="32" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
+  <!-- Center -->
+  <circle cx="32" cy="32" r="4"   fill="#07111f" stroke="#3d9eff" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="1.5" fill="#3d9eff"/>
+
+  <!-- ══ WORDMARK ══ -->
+  <text x="74" y="26"
+    font-family="'Space Grotesk', sans-serif"
+    font-weight="700"
+    font-size="20"
+    fill="#e4f0fc"
+    letter-spacing="-0.5">BAYSIDE</text>
+  <text x="74" y="48"
+    font-family="'Space Mono', monospace"
+    font-weight="400"
+    font-size="13"
+    fill="#3d9eff"
+    letter-spacing="4">AI</text>
+</svg>

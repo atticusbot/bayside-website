@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {
-  const { name, business, email } = await req.json()
+  const { name, business, email, painPoints } = await req.json()
 
   if (!name || !business || !email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
             email,
             company: business,
             hs_lead_status: 'NEW',
-            message: `Audit request from baysideai.co | Business: ${business}`,
+            message: `Audit request from baysideai.co | Business: ${business}${painPoints ? ` | Pain points: ${painPoints}` : ''}`,
           }
         })
       })
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        content: `🎯 **New Audit Request**\n**Name:** ${name}\n**Business:** ${business}\n**Email:** ${email}`,
+        content: `🎯 **New Audit Request**\n**Name:** ${name}\n**Business:** ${business}\n**Email:** ${email}${painPoints ? `\n**Pain points:** ${painPoints}` : ''}`,
       }),
     }).catch((e) => console.error('Discord webhook error:', e))
   } else {
