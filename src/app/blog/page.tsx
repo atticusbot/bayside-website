@@ -43,7 +43,7 @@ export default function BlogPage() {
   const posts = getPosts()
 
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#0a1e1a', padding: '0 1rem' }}>
+    <main style={{ minHeight: '100vh', backgroundColor: '#07111f', padding: '0 1rem' }}>
       {/* Header */}
       <div style={{ maxWidth: '800px', margin: '0 auto', paddingTop: '120px', paddingBottom: '80px' }}>
         <Link
@@ -51,7 +51,7 @@ export default function BlogPage() {
           style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: '0.8rem',
-            color: '#3dffa0',
+            color: '#3d9eff',
             textDecoration: 'none',
             letterSpacing: '0.05em',
             display: 'inline-block',
@@ -66,7 +66,7 @@ export default function BlogPage() {
           style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            color: '#3dffa0',
+            color: '#3d9eff',
             fontWeight: 700,
             letterSpacing: '-0.02em',
             marginBottom: '12px',

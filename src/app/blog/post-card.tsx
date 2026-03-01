@@ -16,18 +16,18 @@ export default function PostCard({ slug, title, date, excerpt }: PostCardProps) 
         style={{
           padding: '36px 40px',
           backgroundColor: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(61,255,160,0.08)',
+          border: '1px solid rgba(61,158,255,0.08)',
           borderRadius: '8px',
           marginBottom: '16px',
           transition: 'border-color 0.2s, background-color 0.2s',
           cursor: 'pointer',
         }}
         onMouseEnter={e => {
-          (e.currentTarget as HTMLElement).style.borderColor = 'rgba(61,255,160,0.3)';
-          (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(61,255,160,0.04)';
+          (e.currentTarget as HTMLElement).style.borderColor = 'rgba(61,158,255,0.3)';
+          (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(61,158,255,0.04)';
         }}
         onMouseLeave={e => {
-          (e.currentTarget as HTMLElement).style.borderColor = 'rgba(61,255,160,0.08)';
+          (e.currentTarget as HTMLElement).style.borderColor = 'rgba(61,158,255,0.08)';
           (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(255,255,255,0.03)';
         }}
       >
@@ -36,7 +36,7 @@ export default function PostCard({ slug, title, date, excerpt }: PostCardProps) 
             style={{
               fontFamily: 'var(--font-space-mono)',
               fontSize: '0.7rem',
-              color: '#3dffa0',
+              color: '#3d9eff',
               letterSpacing: '0.1em',
               opacity: 0.7,
               display: 'block',
@@ -81,7 +81,7 @@ export default function PostCard({ slug, title, date, excerpt }: PostCardProps) 
           style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: '0.75rem',
-            color: '#3dffa0',
+            color: '#3d9eff',
             letterSpacing: '0.05em',
           }}
         >

@@ -60,7 +60,7 @@ export default function AuditForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="mt-4 bg-bio px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.15em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim hover:shadow-[0_8px_30px_rgba(61,255,160,0.2)] disabled:opacity-50 disabled:cursor-not-allowed"
+        className="mt-4 bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.15em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.25)] disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? 'Sending...' : 'Get My Free Audit →'}
       </button>

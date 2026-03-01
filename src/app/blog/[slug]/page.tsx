@@ -38,7 +38,7 @@ function renderBlock(block: string, index: number) {
       <h2 key={index} style={{
         fontFamily: 'var(--font-space-mono)',
         fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
-        color: '#3dffa0',
+        color: '#3d9eff',
         fontWeight: 700,
         marginTop: '48px',
         marginBottom: '16px',
@@ -134,7 +134,7 @@ function renderInline(text: string): React.ReactNode[] {
       const linkMatch = /\[([^\]]+)\]\(([^)]+)\)/.exec(token)
       if (linkMatch) {
         tokens.push(
-          <a key={keyIdx++} href={linkMatch[2]} style={{ color: '#3dffa0', textDecoration: 'underline' }}>
+          <a key={keyIdx++} href={linkMatch[2]} style={{ color: '#3d9eff', textDecoration: 'underline' }}>
             {linkMatch[1]}
           </a>
         )
@@ -167,7 +167,7 @@ export default async function BlogPostPage({
   const paragraphs = content.split('\n\n').filter(p => p.trim())
 
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#0a1e1a', padding: '0 1rem' }}>
+    <main style={{ minHeight: '100vh', backgroundColor: '#07111f', padding: '0 1rem' }}>
       <div style={{ maxWidth: '720px', margin: '0 auto', paddingTop: '120px', paddingBottom: '100px' }}>
 
         <Link
@@ -175,7 +175,7 @@ export default async function BlogPostPage({
           style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: '0.75rem',
-            color: '#3dffa0',
+            color: '#3d9eff',
             textDecoration: 'none',
             letterSpacing: '0.08em',
             display: 'inline-block',
@@ -190,7 +190,7 @@ export default async function BlogPostPage({
           <time style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: '0.7rem',
-            color: '#3dffa0',
+            color: '#3d9eff',
             letterSpacing: '0.12em',
             opacity: 0.65,
             display: 'block',
@@ -210,7 +210,7 @@ export default async function BlogPostPage({
           lineHeight: 1.2,
           letterSpacing: '-0.02em',
           marginBottom: '48px',
-          borderBottom: '1px solid rgba(61,255,160,0.15)',
+          borderBottom: '1px solid rgba(61,158,255,0.15)',
           paddingBottom: '40px',
         }}>
           {data.title}
@@ -224,15 +224,15 @@ export default async function BlogPostPage({
         <div style={{
           marginTop: '64px',
           padding: '40px',
-          backgroundColor: 'rgba(61,255,160,0.06)',
-          border: '1px solid rgba(61,255,160,0.2)',
+          backgroundColor: 'rgba(61,158,255,0.06)',
+          border: '1px solid rgba(61,158,255,0.2)',
           borderRadius: '12px',
           textAlign: 'center',
         }}>
           <p style={{
             fontFamily: 'var(--font-space-mono)',
             fontSize: '0.8rem',
-            color: '#3dffa0',
+            color: '#3d9eff',
             letterSpacing: '0.1em',
             marginBottom: '12px',
           }}>
@@ -251,8 +251,8 @@ export default async function BlogPostPage({
             href="https://baysideai.co/#audit"
             style={{
               fontFamily: 'var(--font-space-mono)',
-              backgroundColor: '#3dffa0',
-              color: '#0a1e1a',
+              backgroundColor: '#3d9eff',
+              color: '#07111f',
               padding: '14px 32px',
               borderRadius: '6px',
               textDecoration: 'none',

@@ -6,19 +6,19 @@ const config: Config = {
     extend: {
       colors: {
         ocean: {
-          dark: '#0a1e1a',
-          mid: '#0f2d28',
-          light: '#1a4037',
-          mist: '#2a5548',
+          dark: '#07111f',
+          mid: '#0c1a2e',
+          light: '#1a3352',
+          mist: '#2a4a6a',
         },
         bio: {
-          DEFAULT: '#3dffa0',
-          dim: '#2acc80',
-          faint: 'rgba(61,255,160,0.12)',
+          DEFAULT: '#3d9eff',
+          dim: '#2a80cc',
+          faint: 'rgba(61,158,255,0.12)',
         },
         sand: '#c8a96e',
         foam: '#e8f5f0',
-        coral: '#ff7a5c',
+        coral: '#ff7a54',
       },
       fontFamily: {
         mono: ['var(--font-space-mono)', 'Space Mono', 'Courier New', 'monospace'],

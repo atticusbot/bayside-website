@@ -56,7 +56,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-bio/10 bg-ocean-dark/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <span className="font-mono text-lg font-bold text-foam tracking-tight">Bayside AI</span>
+            <img src="/bayside-logo.svg" alt="Bayside AI" className="h-8" />
             <span className="hidden sm:inline text-label font-mono text-bio/60 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
           <div className="flex items-center gap-3">
@@ -96,7 +96,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="#audit" className="bg-bio px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim hover:shadow-[0_8px_30px_rgba(61,255,160,0.25)]">
+            <a href="#audit" className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
               Get Your Free Audit
             </a>
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
@@ -205,7 +205,7 @@ export default function Home() {
             Ready to see what&rsquo;s holding you back?
           </p>
           <div className="flex flex-col gap-3 sm:flex-row shrink-0">
-            <a href="#audit" className="bg-bio px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:bg-bio-dim text-center">
+            <a href="#audit" className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
               Get Free Audit
             </a>
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">

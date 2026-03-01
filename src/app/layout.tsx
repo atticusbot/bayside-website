@@ -49,7 +49,7 @@ export default function RootLayout({
             };
           })(window, "https://app.cal.com/embed/embed.js", "init");
           Cal("init", { origin: "https://cal.com" });
-          Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#3dffa0" } } });
+          Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#3d9eff" } } });
         `}</Script>
       </body>
     </html>
