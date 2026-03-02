@@ -23,9 +23,9 @@ const steps = [
 ]
 
 const services = [
-  { title: 'Reputation Management', desc: 'Review monitoring, owner responses, and guest sentiment analysis across Google, TripAdvisor, and Booking.com.' },
-  { title: 'Local & AI Search', desc: 'Google Business Profile optimization, local SEO, and GEO — so your business shows up when customers ask AI assistants.' },
-  { title: 'Guest Communication', desc: 'Pre-arrival, welcome, and follow-up automation that drives reviews and brings customers back.' },
+  { label: '01', title: 'Visibility & Reputation', desc: 'Review monitoring, owner responses, Google Business Profile optimization, local SEO, and GEO — so you show up everywhere customers are looking, including AI assistants.' },
+  { label: '02', title: 'Operations Automation', desc: 'Booking follow-ups, automated review responses, social scheduling, and reporting. Repetitive tasks handled by AI so your team can focus on guests.' },
+  { label: '03', title: 'AI Strategy', desc: 'We map where AI can save you the most time and money, then build and implement the systems — custom to your business, not a generic tool.' },
 ]
 
 const sectors = [
@@ -78,7 +78,7 @@ export default function Home() {
           {/* Section label */}
           <div className="mb-10 inline-flex items-center gap-3">
             <div className="h-px w-6 bg-bio/40"/>
-            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI for Small Business ]</span>
+            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI Automation for the Eastern Shore ]</span>
             <div className="h-px w-6 bg-bio/40"/>
           </div>
 
@@ -88,11 +88,13 @@ export default function Home() {
             <span className="block sm:inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] sm:whitespace-nowrap">Are you listening?</span>
           </h1>
 
-          <p className="font-sans text-lg mx-auto mb-12 max-w-[560px] text-foam/60 leading-relaxed">
-            We manage your online reputation and visibility so you can focus
-            on your guests. Eight million tourists hit the shore every summer —
-            and they decide where to stay, eat, and spend before they ever
-            cross the bridge. Your reputation is your season.
+          <p className="font-sans text-lg mx-auto mb-4 max-w-[560px] text-foam/60 leading-relaxed">
+            We help independent businesses on the shore automate operations,
+            manage their reputation, and get found online — so you can focus
+            on running the place.
+          </p>
+          <p className="font-mono text-sm mx-auto mb-12 max-w-[520px] text-foam/35 leading-relaxed">
+            Built for hotels, restaurants, and shops on the Maryland and Delaware shore.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -175,7 +177,7 @@ export default function Home() {
           <div className="grid gap-px bg-bio/10 md:grid-cols-3">
             {services.map((s) => (
               <div key={s.title} className="group bg-ocean-mid p-8 transition-all duration-300 hover:bg-ocean-light">
-                <div className="mb-4 h-px w-8 bg-bio/40 transition-all duration-300 group-hover:w-16 group-hover:bg-bio"/>
+                <div className="mb-4 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-bio/50">[ {s.label} ]</div>
                 <h3 className="font-mono text-display-md font-bold text-foam mb-3">{s.title}</h3>
                 <p className="font-sans text-sm leading-relaxed text-foam/55 group-hover:text-foam/75 transition-colors">{s.desc}</p>
               </div>
