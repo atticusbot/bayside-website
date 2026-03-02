@@ -302,9 +302,14 @@ export default function Home() {
           <p className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/25">
             &copy; 2026 Bayside AI LLC · Ocean City, MD
           </p>
-          <a href="mailto:tyler@baysideai.co" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
-            tyler@baysideai.co
-          </a>
+          <div className="flex gap-4">
+            <a href="mailto:tyler@baysideai.co" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
+              tyler@baysideai.co
+            </a>
+            <a href="tel:+14433735527" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
+              (443) 373-5527
+            </a>
+          </div>
         </div>
       </footer>
 
