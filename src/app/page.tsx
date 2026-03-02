@@ -112,6 +112,9 @@ export default function Home() {
           <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/25">
             No commitment · Delivered in 48 hours
           </p>
+          <p className="mt-3 font-mono text-sm text-foam/50">
+            Or call / text us: <a href="tel:+14433735527" className="text-bio hover:text-bio/80 transition">(443) 373-5527</a>
+          </p>
         </div>
 
         {/* Scroll chevron */}
@@ -211,6 +214,9 @@ export default function Home() {
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
               Book a Call
             </button>
+            <a href="tel:+14433735527" className="font-mono text-sm text-foam/50 text-center hover:text-bio transition">
+              Call or text: (443) 373-5527
+            </a>
           </div>
         </div>
       </section>
