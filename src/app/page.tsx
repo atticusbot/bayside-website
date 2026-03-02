@@ -7,7 +7,7 @@ import AuditForm from './audit-form'
 
 export const metadata: Metadata = {
   title: 'Bayside AI — AI for Ocean City, MD Businesses',
-  description: 'We help independent businesses on the Maryland shore get found online, fix their reputation, and keep customers coming back.',
+  description: 'We help independent businesses on the East Coast get found online, fix their reputation, and keep customers coming back.',
 }
 
 const problems = [
@@ -78,7 +78,7 @@ export default function Home() {
           {/* Section label */}
           <div className="mb-10 inline-flex items-center gap-3">
             <div className="h-px w-6 bg-bio/40"/>
-            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI for the Eastern Shore ]</span>
+            <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI for Small Business ]</span>
             <div className="h-px w-6 bg-bio/40"/>
           </div>
 
