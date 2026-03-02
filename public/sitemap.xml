@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://baysideai.co</loc>
+<lastmod>2026-03-02T12:49:39.990Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://baysideai.co/blog</loc>
+<lastmod>2026-03-02T12:49:39.990Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://baysideai.co/blog/hotel-review-score-revenue-impact</loc>
+<lastmod>2026-02-25T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://baysideai.co/blog/how-to-respond-to-negative-reviews</loc>
+<lastmod>2026-03-01T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://baysideai.co/blog/what-is-geo-generative-engine-optimization</loc>
+<lastmod>2026-03-02T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+</urlset>
