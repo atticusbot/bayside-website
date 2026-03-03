@@ -235,8 +235,9 @@ export default function Home() {
           <p className="font-sans text-lg text-foam/60 leading-relaxed mb-6">
             Tyler Quigley grew up with family in the Ocean City hotel business — he knows
             the shoulder season panic, the review that tanks a summer, the front desk chaos.
-            Atticus is the AI he built to handle the operation: research, audits, reporting,
-            and the systems that run in the background while Tyler focuses on clients.
+            Atticus is the AI he built to handle the heavy lifting — scanning reviews, tracking
+            rankings, building reports, running automations. That{"'"}s what lets Tyler spend his
+            time actually working with your business instead of drowning in data.
           </p>
           <p className="font-sans text-base text-foam/40 leading-relaxed">
             Together they&rsquo;re Bayside AI — built specifically for independent businesses
