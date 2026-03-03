@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Castle in the Sand Hotel | Oceanfront Ocean City MD Hotel | Book Direct</title>
+  <meta name="description" content="Castle in the Sand Hotel at 37th Street on the oceanfront in Ocean City, MD. 4.2 stars from 1,490 reviews. Book direct for best rates.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://castleinthesand.com/">
+  <meta property="og:title" content="Castle in the Sand Hotel — Oceanfront | Ocean City, MD">
+  <meta property="og:description" content="Oceanfront hotel at 37th Street in Ocean City, MD. 1,490+ reviews. Book direct.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Castle in the Sand Hotel",
+    "url": "https://castleinthesand.com",
+    "telephone": "+14102896846",
+    "email": "info@castleinthesand.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3701 Atlantic Ave",
+      "addressLocality": "Ocean City",
+      "addressRegion": "MD",
+      "postalCode": "21842",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.3649937,
+      "longitude": -75.0703614
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.2",
+      "reviewCount": "1490"
+    },
+    "priceRange": "$$$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-ocean: #1a3a5c;
+      --deep-ocean-mid: #224a72;
+      --seafoam: #4a9e8e;
+      --seafoam-light: #5fbfad;
+      --gold: #c9a84c;
+      --gold-light: #e8c97e;
+      --warm-white: #fdfaf6;
+      --cream: #f5f0e8;
+      --text-dark: #1a2a3a;
+      --text-mid: #4a5568;
+      --radius: 4px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Grain Texture Overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    /* ── Demo Banner ── */
+    .demo-banner {
+      background: var(--deep-ocean);
+      padding: 10px 20px;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .demo-banner a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--warm-white);
+      border-bottom: 1px solid rgba(26,58,92,0.1);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--deep-ocean);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .site-nav a {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-ocean);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .site-nav a:hover {
+      color: var(--gold);
+    }
+    .btn-book-nav {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--deep-ocean);
+      color: var(--warm-white);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-book-nav:hover {
+      background: var(--deep-ocean-mid);
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--deep-ocean);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--deep-ocean);
+      position: relative;
+      overflow: hidden;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/oc-boardwalk-hero.png') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .hero-castle-text {
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: 200px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 120px 60px 120px 60px;
+      text-align: center;
+    }
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 88px;
+      font-weight: 900;
+      color: var(--warm-white);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--seafoam-light);
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(253,250,246,0.6);
+      max-width: 520px;
+      margin: 0 auto 48px auto;
+      font-weight: 300;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--deep-ocean);
+      border: none;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+    }
+    .btn-secondary {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--warm-white);
+      border: 1px solid var(--warm-white);
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+      background: var(--warm-white);
+      color: var(--deep-ocean);
+    }
+
+    /* ── Stat Row ── */
+    .stat-row {
+      background: var(--seafoam);
+      padding: 28px 60px;
+    }
+    .stat-row-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .stat-row-inner span {
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+    }
+    .stat-row-divider {
+      width: 4px;
+      height: 4px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Why Book Direct ── */
+    .why-direct {
+      background: var(--gold);
+      padding: 44px 60px;
+    }
+    .why-direct-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .why-card-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .why-card-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-ocean);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .why-card-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: var(--deep-ocean);
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    /* ── Amenities Grid ── */
+    .amenities {
+      background: var(--cream);
+      padding: 100px 60px;
+    }
+    .amenities-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--deep-ocean);
+      margin-bottom: 56px;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .amenity-card {
+      background: var(--warm-white);
+      border-top: 3px solid var(--gold);
+      border-left: 1px solid rgba(74,158,142,0.15);
+      border-right: 1px solid rgba(74,158,142,0.15);
+      border-bottom: 1px solid rgba(74,158,142,0.15);
+      padding: 40px 28px;
+      border-radius: var(--radius);
+      transition: border-color 0.2s;
+    }
+    .amenity-card:hover {
+      border-left-color: var(--seafoam);
+      border-right-color: var(--seafoam);
+      border-bottom-color: var(--seafoam);
+    }
+    .amenity-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .amenity-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-ocean);
+      font-weight: 700;
+    }
+
+    /* ── Location Section ── */
+    .location {
+      background: var(--deep-ocean);
+      padding: 100px 60px;
+    }
+    .location-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .loc-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .loc-address {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: var(--warm-white);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .loc-phone {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .loc-phone a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .loc-phone a:hover {
+      color: var(--gold-light);
+    }
+    .loc-body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(253,250,246,0.65);
+      line-height: 1.8;
+    }
+    .loc-context {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(253,250,246,0.55);
+      line-height: 1.8;
+    }
+
+    /* ── Book Direct Strip ── */
+    .book-strip {
+      background: var(--gold);
+      padding: 76px 60px;
+      text-align: center;
+    }
+    .book-strip-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--deep-ocean);
+      margin-bottom: 16px;
+    }
+    .book-strip-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: var(--deep-ocean);
+      opacity: 0.8;
+      margin-bottom: 36px;
+      letter-spacing: 0.02em;
+    }
+    .book-strip-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-ocean {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--deep-ocean);
+      color: var(--warm-white);
+      border: none;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-ocean:hover {
+      background: var(--deep-ocean-mid);
+    }
+    .btn-ocean-outline {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--deep-ocean);
+      border: 1px solid var(--deep-ocean);
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-ocean-outline:hover {
+      background: var(--deep-ocean);
+      color: var(--warm-white);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--deep-ocean);
+      padding: 60px 60px 0 60px;
+      border-top: 1px solid rgba(253,250,246,0.08);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+    .footer-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--warm-white);
+      letter-spacing: 0.04em;
+    }
+    .footer-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    .footer-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .footer-contact p,
+    .footer-contact a {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--warm-white);
+      opacity: 0.7;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+    .footer-contact a:hover {
+      opacity: 1;
+    }
+    .footer-links a {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--warm-white);
+      opacity: 0.7;
+      text-decoration: none;
+      line-height: 2;
+    }
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--gold);
+    }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(253,250,246,0.08);
+      padding: 20px 0;
+    }
+    .footer-bottom p {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(253,250,246,0.4);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 0 20px;
+      }
+      .site-nav {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: auto;
+      }
+      .hero-inner {
+        padding: 72px 24px 80px 24px;
+      }
+      .hero-headline {
+        font-size: 52px;
+      }
+      .hero-tagline {
+        font-size: 20px;
+      }
+      .hero-castle-text {
+        font-size: 120px;
+      }
+      .stat-row {
+        padding: 20px 24px;
+      }
+      .stat-row-inner {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .stat-row-inner span {
+        font-size: 12px;
+      }
+      .why-direct {
+        padding: 32px 24px;
+      }
+      .why-direct-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .amenities {
+        padding: 64px 24px;
+      }
+      .section-headline {
+        font-size: 32px;
+      }
+      .location {
+        padding: 64px 24px;
+      }
+      .location-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .loc-headline {
+        font-size: 40px;
+      }
+      .book-strip {
+        padding: 48px 24px;
+      }
+      .book-strip-headline {
+        font-size: 32px;
+      }
+      .site-footer {
+        padding: 40px 24px 0 24px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-headline {
+        font-size: 42px;
+      }
+      .hero-castle-text {
+        font-size: 80px;
+      }
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .book-strip-ctas {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    ⚡ BAYSIDE AI DEMO — showing what castleinthesand.com could look like with proper SEO + AI visibility · <a href="https://baysideai.co">baysideai.co</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-name">CASTLE IN THE SAND</span>
+      <span class="logo-sub">OCEANFRONT HOTEL</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#location">Location</a>
+      <a href="tel:+14102896846" class="btn-book-nav">Book Direct</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-castle-text">CASTLE</div>
+    <div class="hero-inner">
+      <p class="hero-label">[ OCEANFRONT · 37TH STREET · OCEAN CITY ]</p>
+      <h1 class="hero-headline">Castle in the Sand</h1>
+      <p class="hero-tagline">Oceanfront since the beginning.</p>
+      <p class="hero-sub">1,490 guests. One ocean. Zero compromises.</p>
+      <div class="hero-ctas">
+        <a href="tel:+14102896846" class="btn-primary">Book Direct</a>
+        <a href="tel:+14102896846" class="btn-secondary">Call (410) 289-6846</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stat Row -->
+  <div class="stat-row">
+    <div class="stat-row-inner">
+      <span>4.2★</span>
+      <div class="stat-row-divider"></div>
+      <span>1,490 Reviews</span>
+      <div class="stat-row-divider"></div>
+      <span>Oceanfront Location</span>
+    </div>
+  </div>
+
+  <!-- Why Book Direct -->
+  <section class="why-direct">
+    <div class="why-direct-grid">
+      <div>
+        <div class="why-card-icon">💰</div>
+        <div class="why-card-title">Best Rate</div>
+        <p class="why-card-text">No OTA markup. Our rates are our rates.</p>
+      </div>
+      <div>
+        <div class="why-card-icon">🌊</div>
+        <div class="why-card-title">Oceanfront Location</div>
+        <p class="why-card-text">3701 Atlantic Ave. Directly on the Atlantic Ocean.</p>
+      </div>
+      <div>
+        <div class="why-card-icon">📞</div>
+        <div class="why-card-title">Direct Line</div>
+        <p class="why-card-text">Call us at (410) 289-6846. Real people, real answers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities" id="amenities">
+    <div class="amenities-inner">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-headline">Amenities</h2>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">🌊</div>
+          <div class="amenity-name">Ocean Views</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🏖️</div>
+          <div class="amenity-name">Direct Beach Access</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🅿️</div>
+          <div class="amenity-name">Free Parking</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🏊</div>
+          <div class="amenity-name">Pool</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">❄️</div>
+          <div class="amenity-name">Air Conditioning</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">📺</div>
+          <div class="amenity-name">Cable TV</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">📶</div>
+          <div class="amenity-name">WiFi</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">👨‍👩‍👧‍👦</div>
+          <div class="amenity-name">Family Suites</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location" id="location">
+    <div class="location-inner">
+      <div>
+        <h2 class="loc-headline">Find Us</h2>
+        <p class="loc-address">3701 Atlantic Ave</p>
+        <p class="loc-address">Ocean City, MD 21842</p>
+        <p class="loc-phone"><a href="tel:+14102896846">(410) 289-6846</a></p>
+        <p class="loc-body">
+          Directly on the Atlantic Ocean at 37th Street. Walking distance to restaurants, shops, and entertainment in mid-town Ocean City.
+        </p>
+      </div>
+      <div>
+        <p class="loc-context">
+          Castle in the Sand Hotel is located at 3701 Atlantic Avenue in Ocean City, Maryland, directly on the Atlantic Ocean at 37th Street. One of Ocean City's most-reviewed independent hotels, it offers oceanfront rooms with direct beach access in the heart of mid-town Ocean City. Guests are within walking distance of Ocean City's restaurants, shops, and entertainment. With over 1,400 guest reviews, Castle in the Sand is among the most established independent hotels on the Maryland coast.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Direct Strip -->
+  <section class="book-strip">
+    <h2 class="book-strip-headline">Reserve Your Stay</h2>
+    <p class="book-strip-text">Call or book direct for our best rate — no OTA markup, no third-party fees.</p>
+    <div class="book-strip-ctas">
+      <a href="tel:+14102896846" class="btn-ocean">Call (410) 289-6846</a>
+      <a href="mailto:info@castleinthesand.com" class="btn-ocean-outline">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">CASTLE IN THE SAND HOTEL</div>
+        <div class="footer-tagline">OCEANFRONT · OCEAN CITY</div>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-heading">Contact</p>
+        <p>3701 Atlantic Ave</p>
+        <p>Ocean City, MD 21842</p>
+        <p><a href="tel:+14102896846">(410) 289-6846</a></p>
+        <p><a href="mailto:info@castleinthesand.com">info@castleinthesand.com</a></p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">Navigate</p>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#location">Location</a>
+        <a href="tel:+14102896846">Book Direct</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Castle in the Sand Hotel · 3701 Atlantic Ave, Ocean City, MD 21842</p>
+    </div>
+  </footer>
+
+</body>
+</html>

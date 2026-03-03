@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ocean Mecca Motel | Baltimore Ave Ocean City MD | Book Direct</title>
+  <meta name="description" content="Ocean Mecca Motel on Baltimore Avenue near 23rd Street in Ocean City, MD. Rated 3.8 stars by 127 guests. Affordable and steps from the beach. Book direct.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://www.baysideai.co/demos/ocean-mecca-motel.html">
+  <meta property="og:title" content="Ocean Mecca Motel — Classic OC | Ocean City, MD">
+  <meta property="og:description" content="Affordable motel on Baltimore Ave in Ocean City, MD. Book direct.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Ocean Mecca Motel",
+    "telephone": "+14102896133",
+    "email": "reservations@fishtalesboardwalkinn.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2304 Baltimore Ave",
+      "addressLocality": "Ocean City",
+      "addressRegion": "MD",
+      "postalCode": "21842",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.3523836,
+      "longitude": -75.0755916
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "3.8",
+      "reviewCount": "127"
+    },
+    "priceRange": "$"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-navy: #1c2e4a;
+      --deep-navy-mid: #243a5a;
+      --vintage-gold: #c9a040;
+      --vintage-gold-light: #dbb85c;
+      --warm-cream: #faf6ee;
+      --warm-white: #fdfbf5;
+      --rust: #c0522a;
+      --rust-light: #d4663e;
+      --text-dark: #1c2e4a;
+      --text-mid: #4a5568;
+      --radius: 4px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--warm-white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+
+    /* ── Demo Banner ── */
+    .demo-banner {
+      background: var(--deep-navy);
+      padding: 10px 20px;
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .demo-banner a {
+      color: var(--vintage-gold);
+      text-decoration: none;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--warm-cream);
+      border-bottom: 1px solid rgba(28,46,74,0.1);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--deep-navy);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--vintage-gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .site-nav a {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .site-nav a:hover {
+      color: var(--vintage-gold);
+    }
+    .btn-book-nav {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--deep-navy);
+      color: var(--warm-cream);
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-book-nav:hover {
+      background: var(--deep-navy-mid);
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--deep-navy);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--deep-navy);
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/oc-boardwalk-hero.png') center/cover no-repeat;
+      opacity: 0.15;
+    }
+    .hero-mecca-text {
+      position: absolute;
+      font-family: 'Playfair Display', serif;
+      font-size: 220px;
+      font-weight: 900;
+      color: rgba(201,160,64,0.06);
+      line-height: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+      user-select: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 100px 60px 100px 60px;
+      align-items: center;
+    }
+    .hero-left {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--vintage-gold);
+      margin-bottom: 28px;
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: var(--warm-cream);
+      line-height: 1.0;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--vintage-gold);
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(250,246,238,0.6);
+      max-width: 460px;
+      margin-bottom: 44px;
+      font-weight: 300;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--vintage-gold);
+      color: var(--deep-navy);
+      border: none;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--vintage-gold-light);
+    }
+    .btn-secondary {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--warm-cream);
+      border: 1px solid var(--warm-cream);
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+      background: var(--warm-cream);
+      color: var(--deep-navy);
+    }
+
+    /* Hero right */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .stat-stack {
+      position: relative;
+      z-index: 2;
+      background: var(--deep-navy-mid);
+      padding: 40px 36px;
+      width: 260px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(201,160,64,0.15);
+    }
+    .stat-card {
+      padding: 24px 0;
+    }
+    .stat-card:not(:last-child) {
+      border-bottom: 1px solid rgba(250,246,238,0.1);
+    }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--vintage-gold);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--warm-cream);
+      text-transform: uppercase;
+      margin-top: 4px;
+      opacity: 0.7;
+    }
+
+    /* ── Why Book Direct ── */
+    .why-direct {
+      background: var(--vintage-gold);
+      padding: 40px 60px;
+    }
+    .why-direct-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .why-card-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .why-card-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-navy);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .why-card-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: var(--deep-navy);
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    /* ── Amenities Grid ── */
+    .amenities {
+      background: var(--warm-cream);
+      padding: 100px 60px;
+    }
+    .amenities-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--vintage-gold);
+      margin-bottom: 12px;
+    }
+    .section-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 56px;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .amenity-card {
+      background: var(--warm-white);
+      border-top: 3px solid var(--rust);
+      padding: 36px 28px;
+      border-radius: var(--radius);
+    }
+    .amenity-card:nth-child(even) {
+      border-top-color: var(--vintage-gold);
+    }
+    .amenity-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .amenity-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--deep-navy);
+      font-weight: 700;
+    }
+
+    /* ── Location Section ── */
+    .location {
+      background: var(--deep-navy);
+      padding: 100px 60px;
+    }
+    .location-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .loc-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--vintage-gold);
+      margin-bottom: 32px;
+    }
+    .loc-address {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: var(--warm-cream);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .loc-phone {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: var(--vintage-gold);
+      margin-bottom: 28px;
+    }
+    .loc-body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(250,246,238,0.65);
+      line-height: 1.8;
+    }
+    .loc-context {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(250,246,238,0.55);
+      line-height: 1.8;
+    }
+
+    /* ── Book Direct Strip ── */
+    .book-strip {
+      background: var(--vintage-gold);
+      padding: 72px 60px;
+      text-align: center;
+    }
+    .book-strip-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--deep-navy);
+      margin-bottom: 16px;
+    }
+    .book-strip-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: var(--deep-navy);
+      opacity: 0.8;
+      margin-bottom: 36px;
+      letter-spacing: 0.02em;
+    }
+    .book-strip-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-navy {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--deep-navy);
+      color: var(--warm-cream);
+      border: none;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-navy:hover {
+      background: var(--deep-navy-mid);
+    }
+    .btn-navy-outline {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--deep-navy);
+      border: 1px solid var(--deep-navy);
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-navy-outline:hover {
+      background: var(--deep-navy);
+      color: var(--warm-cream);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--deep-navy);
+      padding: 60px 60px 0 60px;
+      border-top: 1px solid rgba(250,246,238,0.08);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+    }
+    .footer-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--warm-cream);
+      letter-spacing: 0.04em;
+    }
+    .footer-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--vintage-gold);
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    .footer-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--vintage-gold);
+      margin-bottom: 16px;
+    }
+    .footer-contact p,
+    .footer-contact a {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--warm-cream);
+      opacity: 0.7;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+    .footer-contact a:hover {
+      opacity: 1;
+    }
+    .footer-links a {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--warm-cream);
+      opacity: 0.7;
+      text-decoration: none;
+      line-height: 2;
+    }
+    .footer-links a:hover {
+      opacity: 1;
+      color: var(--vintage-gold);
+    }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(250,246,238,0.08);
+      padding: 20px 0;
+    }
+    .footer-bottom p {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(250,246,238,0.4);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 0 20px;
+      }
+      .site-nav {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .hero {
+        min-height: auto;
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px 72px 24px;
+      }
+      .hero-headline {
+        font-size: 48px;
+      }
+      .hero-mecca-text {
+        font-size: 120px;
+      }
+      .hero-right {
+        display: none;
+      }
+      .why-direct {
+        padding: 32px 24px;
+      }
+      .why-direct-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .amenities {
+        padding: 64px 24px;
+      }
+      .amenities-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .section-headline {
+        font-size: 32px;
+      }
+      .location {
+        padding: 64px 24px;
+      }
+      .location-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .loc-headline {
+        font-size: 40px;
+      }
+      .book-strip {
+        padding: 48px 24px;
+      }
+      .book-strip-headline {
+        font-size: 32px;
+      }
+      .site-footer {
+        padding: 40px 24px 0 24px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-headline {
+        font-size: 40px;
+      }
+      .hero-mecca-text {
+        font-size: 80px;
+      }
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .book-strip-ctas {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    ⚡ BAYSIDE AI DEMO — showing what Ocean Mecca Motel could look like with proper SEO + AI visibility · <a href="https://baysideai.co">baysideai.co</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-name">OCEAN MECCA MOTEL</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#rooms">Rooms</a>
+      <a href="#location">Location</a>
+      <a href="tel:+14102896133" class="btn-book-nav">Book Direct</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-mecca-text">MECCA</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-label">[ BALTIMORE AVE · OCEAN CITY, MD ]</p>
+        <h1 class="hero-headline">
+          Ocean Mecca<br>
+          Motel
+        </h1>
+        <p class="hero-tagline">Classic Ocean City, steps from the beach.</p>
+        <p class="hero-sub">
+          127 guest reviews. Baltimore Avenue value.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+14102896133" class="btn-primary">Book Direct</a>
+          <a href="tel:+14102896133" class="btn-secondary">Call (410) 289-6133</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stat-stack">
+          <div class="stat-card">
+            <div class="stat-number">3.8★</div>
+            <div class="stat-label">127 Reviews</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">23rd</div>
+            <div class="stat-label">Baltimore Ave</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">$</div>
+            <div class="stat-label">Budget-Friendly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Book Direct -->
+  <section class="why-direct">
+    <div class="why-direct-grid">
+      <div>
+        <div class="why-card-icon">💰</div>
+        <div class="why-card-title">Best Rate</div>
+        <p class="why-card-text">No OTA markup. Our rates are our rates.</p>
+      </div>
+      <div>
+        <div class="why-card-icon">🏖️</div>
+        <div class="why-card-title">Walk to Beach</div>
+        <p class="why-card-text">Short walk from Baltimore Ave to the Atlantic Ocean.</p>
+      </div>
+      <div>
+        <div class="why-card-icon">📞</div>
+        <div class="why-card-title">Direct Line</div>
+        <p class="why-card-text">Call us at (410) 289-6133. Real people, real answers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities" id="rooms">
+    <div class="amenities-inner">
+      <p class="section-label">What We Offer</p>
+      <h2 class="section-headline">Amenities</h2>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">🏖️</div>
+          <div class="amenity-name">Beach Access</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🅿️</div>
+          <div class="amenity-name">Free Parking</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">❄️</div>
+          <div class="amenity-name">Air Conditioning</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">📺</div>
+          <div class="amenity-name">Cable TV</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">📶</div>
+          <div class="amenity-name">WiFi</div>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">💲</div>
+          <div class="amenity-name">Budget Friendly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location" id="location">
+    <div class="location-inner">
+      <div>
+        <h2 class="loc-headline">Find Us</h2>
+        <p class="loc-address">2304 Baltimore Ave</p>
+        <p class="loc-address">Ocean City, MD 21842</p>
+        <p class="loc-phone">(410) 289-6133</p>
+        <p class="loc-body">
+          Located on Baltimore Avenue near 23rd Street, on the quiet inland side of Ocean City. A short walk from the Atlantic Ocean beach and the Ocean City Boardwalk.
+        </p>
+      </div>
+      <div>
+        <p class="loc-context">
+          Ocean Mecca Motel is located at 2304 Baltimore Avenue in Ocean City, Maryland, on the quiet inland side of the island near 23rd Street. Baltimore Avenue is a local corridor popular with budget-conscious travelers and repeat OC visitors who know the area. Just a short walk from the Atlantic Ocean beach and the Ocean City Boardwalk, the motel is an affordable option in a convenient mid-town location. Ocean City sees over 8 million visitors each summer, and Baltimore Avenue properties offer easy access without oceanfront pricing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Direct Strip -->
+  <section class="book-strip">
+    <h2 class="book-strip-headline">Reserve Your Stay</h2>
+    <p class="book-strip-text">Call or book direct for our best rate — no OTA markup, no third-party fees.</p>
+    <div class="book-strip-ctas">
+      <a href="tel:+14102896133" class="btn-navy">Call (410) 289-6133</a>
+      <a href="mailto:reservations@fishtalesboardwalkinn.com" class="btn-navy-outline">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">OCEAN MECCA MOTEL</div>
+        <div class="footer-tagline">BALTIMORE AVE · OCEAN CITY</div>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-heading">Contact</p>
+        <p>2304 Baltimore Ave</p>
+        <p>Ocean City, MD 21842</p>
+        <p><a href="tel:+14102896133">(410) 289-6133</a></p>
+        <p><a href="mailto:reservations@fishtalesboardwalkinn.com">reservations@fishtalesboardwalkinn.com</a></p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-heading">Navigate</p>
+        <a href="#rooms">Rooms</a>
+        <a href="#location">Location</a>
+        <a href="tel:+14102896133">Book Direct</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ocean Mecca Motel · 2304 Baltimore Ave, Ocean City, MD 21842</p>
+    </div>
+  </footer>
+
+</body>
+</html>
