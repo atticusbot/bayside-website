@@ -1,34 +1,32 @@
-<svg width="240" height="64" viewBox="0 0 240 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- ══ NAUTICAL CHART MARK — Logo 3 ══ -->
-  <!-- Outer ring -->
-  <circle cx="32" cy="32" r="28" stroke="#1a3352" stroke-width="1" fill="none"/>
-  <!-- Radar/sweep arc (coral) — north-east quadrant -->
-  <path d="M 32 32 L 32 6 A 26 26 0 0 1 56 28 Z" fill="#ff7a54" opacity="0.13"/>
-  <path d="M 32 6 A 26 26 0 0 1 56 28" stroke="#ff7a54" stroke-width="1.5" fill="none" opacity="0.65"/>
-  <!-- Inner ring -->
-  <circle cx="32" cy="32" r="16" stroke="#1a4a7a" stroke-width="1" fill="none" opacity="0.6"/>
-  <!-- Bay/coastline curve (blue) — the water element -->
-  <path d="M 10 44 Q 20 32 32 38 Q 44 44 54 36" stroke="#3d9eff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <!-- Cardinal crosshairs -->
-  <line x1="32" y1="4"  x2="32" y2="18" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
-  <line x1="32" y1="46" x2="32" y2="60" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
-  <line x1="4"  y1="32" x2="18" y2="32" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
-  <line x1="46" y1="32" x2="60" y2="32" stroke="#3d9eff" stroke-width="1" opacity="0.4"/>
-  <!-- Center -->
-  <circle cx="32" cy="32" r="4"   fill="#07111f" stroke="#3d9eff" stroke-width="1.5"/>
-  <circle cx="32" cy="32" r="1.5" fill="#3d9eff"/>
-
-  <!-- ══ WORDMARK ══ -->
-  <text x="74" y="26"
-    font-family="'Space Grotesk', sans-serif"
-    font-weight="700"
-    font-size="20"
-    fill="#e4f0fc"
-    letter-spacing="-0.5">BAYSIDE</text>
-  <text x="74" y="48"
-    font-family="'Space Mono', monospace"
-    font-weight="400"
-    font-size="13"
-    fill="#3d9eff"
-    letter-spacing="4">AI</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 423 428" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+ <g transform="matrix(1,0,0,1,-54.9406,-2076.85)">
+ <g transform="matrix(1,0,0,1,-254.36,-153.148)">
+ <g id="_-Curve-" serif:id="(Curve)" transform="matrix(1,0,0,1,254.36,153.148)">
+ <path d="M266.211,2240.78L266.211,2092.12C380.445,2096.64 456.341,2183.6 469.996,2290.74L316.178,2290.74C316.178,2263.17 293.789,2240.78 266.211,2240.78Z" style="fill:rgb(255,122,84);"/>
+ </g>
+ <g transform="matrix(0.2071,-0.649301,0.505568,0.265979,-450.357,2566.13)">
+ <path d="M941,1535L1107,1467" style="fill:none;stroke:white;stroke-width:21.85px;"/>
+ </g>
+ <g transform="matrix(0.2071,-0.649301,0.505568,0.265979,-450.357,2848.59)">
+ <path d="M941,1535L1107,1467" style="fill:none;stroke:white;stroke-width:21.85px;"/>
+ </g>
+ <g transform="matrix(0.649301,0.2071,-0.265979,0.505568,113.858,1472.97)">
+ <path d="M941,1535L1107,1467" style="fill:none;stroke:white;stroke-width:21.85px;"/>
+ </g>
+ <g transform="matrix(0.649301,0.2071,-0.265979,0.505568,395.771,1472.97)">
+ <path d="M941,1535L1107,1467" style="fill:none;stroke:white;stroke-width:21.85px;"/>
+ </g>
+ <g transform="matrix(0.493622,0,0,0.499749,-18.4643,1634.8)">
+ <path d="M1092,1191C1328.22,1191 1520,1382.78 1520,1619C1520,1855.22 1328.22,2047 1092,2047C855.78,2047 664,1855.22 664,1619C664,1382.78 855.78,1191 1092,1191ZM1092,1228.47C1307.54,1228.47 1482.53,1403.46 1482.53,1619C1482.53,1834.54 1307.54,2009.53 1092,2009.53C876.463,2009.53 701.474,1834.54 701.474,1619C701.474,1403.46 876.463,1228.47 1092,1228.47Z" style="fill:white;"/>
+ </g>
+ <g transform="matrix(0.284021,0,0,0.284021,210.42,1984.06)">
+ <path d="M1092,1191C1328.22,1191 1520,1382.78 1520,1619C1520,1855.22 1328.22,2047 1092,2047C855.78,2047 664,1855.22 664,1619C664,1382.78 855.78,1191 1092,1191ZM1092,1242.56C1299.76,1242.56 1468.44,1411.24 1468.44,1619C1468.44,1826.76 1299.76,1995.44 1092,1995.44C884.239,1995.44 715.563,1826.76 715.563,1619C715.563,1411.24 884.239,1242.56 1092,1242.56Z" style="fill:white;"/>
+ </g>
+ <g transform="matrix(0.546341,0,0,0.546341,140.317,1011.66)">
+ <path d="M696,2548.5C736.29,2548.5 769,2581.21 769,2621.5C769,2661.79 736.29,2694.5 696,2694.5C655.71,2694.5 623,2661.79 623,2621.5C623,2581.21 655.71,2548.5 696,2548.5ZM696,2574.5C721.94,2574.5 743,2595.56 743,2621.5C743,2647.44 721.94,2668.5 696,2668.5C670.06,2668.5 649,2647.44 649,2621.5C649,2595.56 670.06,2574.5 696,2621.5Z" style="fill:white;"/>
+ </g>
+ </g>
+ </g>
 </svg>
