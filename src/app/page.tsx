@@ -57,7 +57,8 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
             <img src="/bayside-logo.svg" alt="Bayside AI" className="h-8" />
-            <span className="hidden sm:inline text-label font-mono text-bio/60 uppercase tracking-[0.15em]">[ Ocean City ]</span>
+            <span className="font-mono font-bold text-foam tracking-tight">Bayside AI</span>
+            <span className="hidden sm:inline text-label font-mono text-bio/40 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
           <div className="flex items-center gap-3">
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/50 transition-all duration-200 hover:text-bio">
