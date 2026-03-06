@@ -58,7 +58,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img src="/bayside-logo.svg" alt="Bayside AI" className="h-8" />
             <span className="font-mono font-bold text-foam tracking-tight">Bayside AI</span>
-            <span className="hidden sm:inline text-label font-mono text-bio/40 uppercase tracking-[0.15em]">[ Ocean City ]</span>
+            <span className="hidden sm:inline text-label font-mono text-bio/70 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
           <div className="flex items-center gap-3">
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/50 transition-all duration-200 hover:text-bio">
@@ -71,6 +71,7 @@ export default function Home() {
         </div>
       </nav>
 
+      <main>
       {/* ── HERO ── */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-20">
 
@@ -107,22 +108,22 @@ export default function Home() {
             </button>
           </div>
           <div className="mt-4">
-            <a href="#how-it-works" className="font-mono text-sm text-foam/40 transition hover:text-foam/70">
+            <a href="#how-it-works" className="font-mono text-sm text-foam/60 transition hover:text-foam/70">
               see how it works →
             </a>
           </div>
 
-          <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/25">
+          <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/40">
             No commitment · Delivered in 48 hours
           </p>
           <p className="mt-3 font-mono text-sm text-foam/50">
-            Or call / text us: <a href="tel:+14433735527" className="text-bio hover:text-bio/80 transition">(443) 373-5527</a>
+            Or call / text us: <a href="tel:+14433735527" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">(443) 373-5527</a>
           </p>
         </div>
 
         {/* Scroll chevron */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="h-5 w-5 text-foam/20" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <svg aria-hidden="true" className="h-5 w-5 text-foam/20" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
           </svg>
         </div>
@@ -163,7 +164,7 @@ export default function Home() {
                   <span className="font-mono text-label uppercase tracking-[0.15em] text-bio/60">{step.label}</span>
                 </div>
                 <h3 className="font-mono text-display-md font-bold text-foam mb-3">{step.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-foam/55">{step.desc}</p>
+                <p className="font-sans text-sm leading-relaxed text-foam/70">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -180,7 +181,7 @@ export default function Home() {
               <div key={s.title} className="group bg-ocean-mid p-8 transition-all duration-300 hover:bg-ocean-light">
                 <div className="mb-4 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-bio/50">[ {s.label} ]</div>
                 <h3 className="font-mono text-display-md font-bold text-foam mb-3">{s.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-foam/55 group-hover:text-foam/75 transition-colors">{s.desc}</p>
+                <p className="font-sans text-sm leading-relaxed text-foam/70 group-hover:text-foam/75 transition-colors">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -197,7 +198,7 @@ export default function Home() {
               <div key={s.title} className="group bg-ocean-dark p-8 transition-all duration-300 hover:bg-ocean-light">
                 <div className="mb-4 h-px w-8 bg-bio/40 transition-all duration-300 group-hover:w-16 group-hover:bg-bio"/>
                 <h3 className="font-mono text-display-md font-bold text-foam mb-3">{s.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-foam/55 group-hover:text-foam/75 transition-colors">{s.desc}</p>
+                <p className="font-sans text-sm leading-relaxed text-foam/70 group-hover:text-foam/75 transition-colors">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -239,7 +240,7 @@ export default function Home() {
             Atticus is the AI he built to handle the heavy lifting — so Tyler can spend his
             time working on new ways to save you time and money.
           </p>
-          <p className="font-sans text-base text-foam/40 leading-relaxed">
+          <p className="font-sans text-base text-foam/60 leading-relaxed">
             Together they&rsquo;re Bayside AI — built specifically for independent businesses
             on the Maryland and Delaware shore.
           </p>
@@ -289,13 +290,13 @@ export default function Home() {
           <h2 className="font-mono text-display-lg font-bold text-foam mb-4">
             Find out what customers really think.
           </h2>
-          <p className="font-sans text-base text-foam/55 mb-12 leading-relaxed">
+          <p className="font-sans text-base text-foam/70 mb-12 leading-relaxed">
             We&rsquo;ll pull your reviews, check your search visibility, and tell you
             exactly what to fix — for free. Delivered in 48 hours.
           </p>
           <AuditForm />
           <div className="mt-10 pt-8 border-t border-bio/10 text-center">
-            <p className="font-mono text-sm text-foam/40 mb-3">Prefer to talk first?</p>
+            <p className="font-mono text-sm text-foam/60 mb-3">Prefer to talk first?</p>
             <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="font-mono text-sm text-bio/60 hover:text-bio transition-colors underline underline-offset-4">
               Book a 15-min call →
             </button>
@@ -303,11 +304,13 @@ export default function Home() {
         </div>
       </section>
 
+      </main>
+
       {/* ── FOOTER ── */}
       <footer className="border-t border-bio/10 bg-ocean-dark px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <span className="font-mono text-sm font-bold text-foam/50">Bayside AI</span>
-          <p className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/25">
+          <p className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/40">
             &copy; 2026 Bayside AI LLC · Ocean City, MD
           </p>
           <div className="flex gap-4">

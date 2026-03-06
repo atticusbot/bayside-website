@@ -32,7 +32,7 @@ export default function AuditForm() {
       <div className="border border-bio/30 bg-bio/5 p-8 text-center">
         <div className="font-mono text-bio text-2xl font-bold mb-3">✓</div>
         <p className="font-mono text-foam font-bold mb-2">Request received.</p>
-        <p className="font-sans text-foam/55 text-sm">Your audit will be in your inbox within 48 hours.</p>
+        <p className="font-sans text-foam/70 text-sm">Your audit will be in your inbox within 48 hours.</p>
       </div>
     )
   }
@@ -45,10 +45,11 @@ export default function AuditForm() {
         { name: 'email', label: 'Email address', type: 'email' },
       ].map(field => (
         <div key={field.name} className="group relative">
-          <label className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
+          <label htmlFor={field.name} className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
             {field.label}
           </label>
           <input
+            id={field.name}
             type={field.type}
             name={field.name}
             required
@@ -59,10 +60,11 @@ export default function AuditForm() {
       ))}
 
       <div className="group relative">
-        <label className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
+        <label htmlFor="painPoints" className="block font-mono text-label uppercase tracking-[0.15em] text-bio/60 mb-2">
           If I could automate one part of my week it would be: <span className="text-foam/30 normal-case tracking-normal">(optional)</span>
         </label>
         <textarea
+          id="painPoints"
           name="painPoints"
           rows={3}
           disabled={status === 'loading'}
@@ -81,7 +83,7 @@ export default function AuditForm() {
       {status === 'error' && (
         <p className="font-mono text-xs text-coral text-center">Something went wrong — email tyler@baysideai.co directly.</p>
       )}
-      <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/25 text-center">
+      <p className="font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/40 text-center">
         No commitment · No sales call · Just data
       </p>
     </form>
