@@ -21,10 +21,10 @@ const schemaOrg = {
   "@graph": [
     {
       "@type": ["LocalBusiness", "ProfessionalService"],
-      "@id": "https://baysideai.co/#organization",
+      "@id": "https://www.baysideai.co/#organization",
       "name": "Bayside AI",
       "description": "AI-powered reputation management and local search visibility for independent hotels, restaurants, retail shops, and experiences on the Maryland Eastern Shore.",
-      "url": "https://baysideai.co",
+      "url": "https://www.baysideai.co",
       "email": "tyler@baysideai.co",
       "areaServed": [
         {"@type": "City", "name": "Ocean City", "addressRegion": "MD", "addressCountry": "US"},
@@ -49,23 +49,23 @@ const schemaOrg = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://baysideai.co/#website",
-      "url": "https://baysideai.co",
+      "@id": "https://www.baysideai.co/#website",
+      "url": "https://www.baysideai.co",
       "name": "Bayside AI",
-      "publisher": {"@id": "https://baysideai.co/#organization"}
+      "publisher": {"@id": "https://www.baysideai.co/#organization"}
     }
   ]
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://baysideai.co"),
+  metadataBase: new URL("https://www.baysideai.co"),
   title: "Bayside AI — AI for Ocean City, MD Businesses",
   description: "We manage your online reputation and visibility so you can focus on your guests. Built for Ocean City hotels, restaurants, shops, and experiences.",
   openGraph: {
     title: "Bayside AI — AI for Ocean City, MD Businesses",
     description: "We manage your online reputation and visibility so you can focus on your guests. Eight million tourists. One shore season. Your reputation is your season.",
     type: "website",
-    url: "https://baysideai.co",
+    url: "https://www.baysideai.co",
     siteName: "Bayside AI",
     images: [{url: "/opengraph-image", width: 1200, height: 630, alt: "Bayside AI — Your reputation is your season."}],
   },
