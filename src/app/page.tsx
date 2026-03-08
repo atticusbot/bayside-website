@@ -16,7 +16,7 @@ const problems = [
 ]
 
 const steps = [
-  { num: '01', label: 'Audit', title: 'We find the leak', desc: 'A 15-minute call to identify the task costing you the most time and money. No prep needed.' },
+  { num: '01', label: 'Audit', title: 'We find the leak', desc: 'A 30-minute call to identify the task costing you the most time and money. No prep needed.' },
   { num: '02', label: 'Build', title: 'We set it up', desc: 'We build and configure the automation for your business. Usually live within a week.' },
   { num: '03', label: 'Free', title: 'First month on us', desc: 'You pay nothing for month one. If it works, you stay. If not, no hard feelings.' },
 ]
@@ -92,7 +92,7 @@ export default function Home() {
             <a href="#pricing" className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/70 transition-all duration-200 hover:text-bio">
               Pricing
             </a>
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110">
+            <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110">
               Claim Free Month
             </button>
           </div>
@@ -117,14 +117,14 @@ export default function Home() {
           <p className="font-sans text-lg mx-auto mb-4 max-w-[560px] text-foam/60 leading-relaxed">
             We identify the repetitive tasks eating your week and automate them —
             missed calls, review responses, follow-ups, scheduling. Book a
-            15-minute call and your first month is on us.
+            30-minute call and your first month is on us.
           </p>
           <p className="font-mono text-sm mx-auto mb-12 max-w-[520px] text-foam/40 leading-relaxed">
             Built for independent businesses on the Maryland and Delaware shore.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+            <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
               Claim Your Free Month →
             </button>
             <a href="#pricing" className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
@@ -192,7 +192,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-16 text-center">
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+            <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
               Book Your Free Call →
             </button>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full border border-bio/40 py-2.5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+                <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full border border-bio/40 py-2.5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
                   Start Free →
                 </button>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
           </div>
           <p className="mt-8 font-mono text-xs text-foam/40 text-center">
             Not sure which tier?{' '}
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="underline underline-offset-4 text-bio/60 hover:text-bio transition-colors">
+            <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="underline underline-offset-4 text-bio/60 hover:text-bio transition-colors">
               Book a call
             </button>
             {' '}— we&rsquo;ll tell you exactly what you need.
@@ -265,7 +265,7 @@ export default function Home() {
             <span className="text-bio">What are you waiting for?</span>
           </p>
           <div className="flex flex-col gap-3 sm:flex-row shrink-0">
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
+            <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
               Claim Free Month
             </button>
             <a href="tel:+14433735527" className="font-mono text-sm text-foam/60 text-center hover:text-bio transition self-center">
@@ -338,13 +338,13 @@ export default function Home() {
         <div className="mx-auto max-w-lg text-center">
           <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 06 ]</div>
           <h2 className="font-mono text-display-lg font-bold text-foam mb-4">
-            Book a 15-minute call.
+            Book a 30-minute call.
           </h2>
           <p className="font-sans text-base text-foam/70 mb-10 leading-relaxed">
             We&rsquo;ll identify your highest-impact automation and set it up free for your first month.
             No pitch, no pressure — just a clear answer on where AI can help most.
           </p>
-          <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full bg-coral px-10 py-5 font-mono text-base font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+          <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full bg-coral px-10 py-5 font-mono text-base font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
             Claim Your Free Month →
           </button>
           <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/40">
