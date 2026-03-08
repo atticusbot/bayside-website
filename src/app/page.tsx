@@ -3,36 +3,64 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import AuditForm from './audit-form'
 
 export const metadata: Metadata = {
-  title: 'Bayside AI — AI for Ocean City, MD Businesses',
-  description: 'We help independent businesses on the East Coast get found online, fix their reputation, and keep customers coming back.',
+  title: 'Bayside AI — AI Automation for Small Business',
+  description: 'We identify the repetitive tasks eating your week and automate them. Missed calls, review responses, follow-ups, scheduling. First automation is on us.',
 }
 
 const problems = [
-  { num: '01', text: 'Negative reviews going unanswered for months' },
-  { num: '02', text: 'Invisible in Google and AI-powered search' },
-  { num: '03', text: 'No time to manage your digital presence' },
+  { num: '01', text: 'Calling back missed leads hours later — or not at all' },
+  { num: '02', text: 'Writing the same review responses over and over' },
+  { num: '03', text: 'Following up on bookings and invoices manually' },
 ]
 
 const steps = [
-  { num: '01', label: 'Audit', title: 'We scan everything', desc: 'Reviews, search rankings, competitor positions, guest sentiment. A full picture in 48 hours.' },
-  { num: '02', label: 'Fix', title: 'We fix what\'s broken', desc: 'Owner responses, listing cleanup, search optimization, AI visibility. Done-for-you.' },
-  { num: '03', label: 'Grow', title: 'We keep it growing', desc: 'Monthly reporting, ongoing reputation management, and AI systems that work while you sleep.' },
+  { num: '01', label: 'Audit', title: 'We find the leak', desc: 'A 15-minute call to identify the task costing you the most time and money. No prep needed.' },
+  { num: '02', label: 'Build', title: 'We set it up', desc: 'We build and configure the automation for your business. Usually live within a week.' },
+  { num: '03', label: 'Free', title: 'First month on us', desc: 'You pay nothing for month one. If it works, you stay. If not, no hard feelings.' },
 ]
 
-const services = [
-  { label: '01', title: 'Visibility & Reputation', desc: 'Review monitoring, owner responses, Google Business Profile optimization, local SEO, and GEO — so you show up everywhere customers are looking, including AI assistants.' },
-  { label: '02', title: 'Operations Automation', desc: 'Booking follow-ups, automated review responses, social scheduling, and reporting. Repetitive tasks handled by AI so your team can focus on guests.' },
-  { label: '03', title: 'AI Strategy', desc: 'We map where AI can save you the most time and money, then build and implement the systems — custom to your business, not a generic tool.' },
+const tiers = [
+  {
+    label: 'Simple',
+    price: '$99–149',
+    setup: '$250 setup',
+    items: ['Missed call text-back', 'Review monitoring & alerts', 'Appointment reminders', 'Post-visit review requests'],
+    color: 'border-bio/30',
+    tag: 'Most popular starting point',
+  },
+  {
+    label: 'Smart',
+    price: '$249–349',
+    setup: '$750 setup',
+    items: ['Email triage + draft responses', 'Lead qualification', 'Booking follow-up sequences', 'Competitor rate monitoring'],
+    color: 'border-coral/40',
+    tag: 'Best ROI for service businesses',
+  },
+  {
+    label: 'Complex',
+    price: '$449–599',
+    setup: '$1,500 setup',
+    items: ['AI concierge (SMS/iMessage)', 'Dynamic pricing engine', 'Full reputation management', 'Content & social engine'],
+    color: 'border-bio/30',
+    tag: 'For businesses ready to scale',
+  },
+  {
+    label: 'AI Assistant',
+    price: '$999–1,499',
+    setup: '$3,000 setup',
+    items: ['Dedicated AI for your business', 'Unlimited automations', 'Connected to all your tools', 'Learns your business over time'],
+    color: 'border-coral/40',
+    tag: '3–4 automations = same cost',
+  },
 ]
 
 const sectors = [
-  { title: 'Hotels', desc: 'Independent and boutique properties. We know this business from the inside.' },
-  { title: 'Restaurants', desc: 'From boardwalk staples to waterfront dining. Be the first place tourists find when they\'re deciding where to eat.' },
-  { title: 'Retail & Service', desc: 'Shops, salons, spas. Your next customer is searching right now.' },
-  { title: 'Experiences', desc: 'Mini golf, boat tours, arcades, activities. Make every search lead here.' },
+  { title: 'Hotels', desc: 'Automate guest comms, review responses, and booking follow-ups.' },
+  { title: 'Restaurants', desc: 'Never miss a reservation call. Follow up with every diner automatically.' },
+  { title: 'Retail & Service', desc: 'Capture every lead, send every invoice reminder, fill every slow day.' },
+  { title: 'Experiences', desc: 'Fill slow days with automated promos. Turn one visit into five-star reviews.' },
 ]
 
 function getRecentPosts(count = 3) {
@@ -61,12 +89,12 @@ export default function Home() {
             <span className="hidden sm:inline text-label font-mono text-bio/70 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
           <div className="flex items-center gap-3">
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/50 transition-all duration-200 hover:text-bio">
-              Book a Call
-            </button>
-            <a href="#audit" className="border border-bio/40 px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
-              Free Audit
+            <a href="#pricing" className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/70 transition-all duration-200 hover:text-bio">
+              Pricing
             </a>
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110">
+              Claim Free Month
+            </button>
           </div>
         </div>
       </nav>
@@ -74,38 +102,34 @@ export default function Home() {
       <main>
       {/* ── HERO ── */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-20">
-
-
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          {/* Section label */}
           <div className="mb-10 inline-flex items-center gap-3">
             <div className="h-px w-6 bg-bio/40"/>
             <span className="font-mono text-label uppercase tracking-[0.2em] text-bio/70">[ AI Automation for the Eastern Shore ]</span>
             <div className="h-px w-6 bg-bio/40"/>
           </div>
 
-          {/* Headline with word-level highlight */}
           <h1 className="font-mono text-display-xl font-bold mb-10">
-            <span className="block text-foam mb-6 leading-[1.1]">Your guests are talking.</span>
-            <span className="block sm:inline-block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1] sm:whitespace-nowrap">Are you listening?</span>
+            <span className="block text-foam mb-6 leading-[1.1]">Stop doing it manually.</span>
+            <span className="block bg-bio/15 border border-bio/30 px-4 py-3 text-bio leading-[1.1]">Your first automation is free.</span>
           </h1>
 
           <p className="font-sans text-lg mx-auto mb-4 max-w-[560px] text-foam/60 leading-relaxed">
-            We help independent businesses on the shore automate operations,
-            manage their reputation, and get found online — so you can focus
-            on running the place.
+            We identify the repetitive tasks eating your week and automate them —
+            missed calls, review responses, follow-ups, scheduling. Book a
+            15-minute call and your first month is on us.
           </p>
-          <p className="font-mono text-sm mx-auto mb-12 max-w-[520px] text-foam/35 leading-relaxed">
-            Built for hotels, restaurants, and shops on the Maryland and Delaware shore.
+          <p className="font-mono text-sm mx-auto mb-12 max-w-[520px] text-foam/40 leading-relaxed">
+            Built for independent businesses on the Maryland and Delaware shore.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href="#audit" className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
-              Get Your Free Audit
-            </a>
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
-              Book a Call
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+              Claim Your Free Month →
             </button>
+            <a href="#pricing" className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+              See Pricing
+            </a>
           </div>
           <div className="mt-4">
             <a href="#how-it-works" className="font-mono text-sm text-foam/60 transition hover:text-foam/70">
@@ -114,14 +138,13 @@ export default function Home() {
           </div>
 
           <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/40">
-            No commitment · Delivered in 48 hours
+            No commitment · First month free · Live within a week
           </p>
           <p className="mt-3 font-mono text-sm text-foam/50">
-            Or call / text us: <a href="tel:+14433735527" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">(443) 373-5527</a>
+            Or call / text: <a href="tel:+14433735527" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">(443) 373-5527</a>
           </p>
         </div>
 
-        {/* Scroll chevron */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <svg aria-hidden="true" className="h-5 w-5 text-foam/20" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
@@ -168,23 +191,52 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-16 text-center">
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+              Book Your Free Call →
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* ── SERVICES ── */}
-      <section className="px-6 py-24 md:py-32 bg-ocean-mid">
+      {/* ── PRICING / SERVICES ── */}
+      <section id="pricing" className="px-6 py-24 md:py-32 bg-ocean-mid">
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 03 ]</div>
-          <h2 className="font-mono text-display-lg font-bold text-foam mb-16">What we do</h2>
-          <div className="grid gap-px bg-bio/10 md:grid-cols-3">
-            {services.map((s) => (
-              <div key={s.title} className="group bg-ocean-mid p-8 transition-all duration-300 hover:bg-ocean-light">
-                <div className="mb-4 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-bio/50">[ {s.label} ]</div>
-                <h3 className="font-mono text-display-md font-bold text-foam mb-3">{s.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-foam/70 group-hover:text-foam/75 transition-colors">{s.desc}</p>
+          <h2 className="font-mono text-display-lg font-bold text-foam mb-4">Pick your automation.</h2>
+          <p className="font-sans text-base text-foam/60 mb-16 max-w-xl leading-relaxed">
+            Every plan starts with a free audit to identify your highest-impact automation. First month is always free.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {tiers.map((tier) => (
+              <div key={tier.label} className={`group relative flex flex-col bg-ocean-dark border ${tier.color} p-6 transition-all duration-300 hover:border-bio/60`}>
+                {tier.tag && (
+                  <div className="mb-3 font-mono text-[0.55rem] uppercase tracking-[0.2em] text-coral/80">{tier.tag}</div>
+                )}
+                <h3 className="font-mono text-lg font-bold text-foam mb-1">{tier.label}</h3>
+                <div className="font-mono text-2xl font-bold text-bio mb-1">{tier.price}<span className="text-sm text-foam/40">/mo</span></div>
+                <div className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/40 mb-6">{tier.setup} · First month free</div>
+                <ul className="flex flex-col gap-2 flex-1 mb-6">
+                  {tier.items.map(item => (
+                    <li key={item} className="flex items-start gap-2 font-sans text-sm text-foam/70">
+                      <span className="text-bio mt-0.5 shrink-0">→</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full border border-bio/40 py-2.5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+                  Start Free →
+                </button>
               </div>
             ))}
           </div>
+          <p className="mt-8 font-mono text-xs text-foam/40 text-center">
+            Not sure which tier?{' '}
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="underline underline-offset-4 text-bio/60 hover:text-bio transition-colors">
+              Book a call
+            </button>
+            {' '}— we&rsquo;ll tell you exactly what you need.
+          </p>
         </div>
       </section>
 
@@ -205,21 +257,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── MID-PAGE CTA STRIP ── */}
+      {/* ── MID-PAGE CTA ── */}
       <section className="px-6 py-14 bg-ocean-light border-y border-bio/10">
         <div className="mx-auto max-w-4xl flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           <p className="font-mono text-display-md font-bold text-foam text-center sm:text-left">
-            Ready to see what&rsquo;s holding you back?
+            Your first month is free.<br/>
+            <span className="text-bio">What are you waiting for?</span>
           </p>
           <div className="flex flex-col gap-3 sm:flex-row shrink-0">
-            <a href="#audit" className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
-              Get Free Audit
-            </a>
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="border border-bio/40 px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
-              Book a Call
+            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
+              Claim Free Month
             </button>
-            <a href="tel:+14433735527" className="font-mono text-sm text-foam/50 text-center hover:text-bio transition">
-              Call or text: (443) 373-5527
+            <a href="tel:+14433735527" className="font-mono text-sm text-foam/60 text-center hover:text-bio transition self-center">
+              (443) 373-5527
             </a>
           </div>
         </div>
@@ -283,24 +333,26 @@ export default function Home() {
         )
       })()}
 
-      {/* ── AUDIT FORM ── */}
-      <section id="audit" className="px-6 py-24 md:py-32 bg-ocean-mid">
-        <div className="mx-auto max-w-lg">
+      {/* ── FINAL CTA ── */}
+      <section id="book" className="px-6 py-24 md:py-32 bg-ocean-mid">
+        <div className="mx-auto max-w-lg text-center">
           <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 06 ]</div>
           <h2 className="font-mono text-display-lg font-bold text-foam mb-4">
-            Find out what customers really think.
+            Book a 15-minute call.
           </h2>
-          <p className="font-sans text-base text-foam/70 mb-12 leading-relaxed">
-            We&rsquo;ll pull your reviews, check your search visibility, and tell you
-            exactly what to fix — for free. Delivered in 48 hours.
+          <p className="font-sans text-base text-foam/70 mb-10 leading-relaxed">
+            We&rsquo;ll identify your highest-impact automation and set it up free for your first month.
+            No pitch, no pressure — just a clear answer on where AI can help most.
           </p>
-          <AuditForm />
-          <div className="mt-10 pt-8 border-t border-bio/10 text-center">
-            <p className="font-mono text-sm text-foam/60 mb-3">Prefer to talk first?</p>
-            <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="font-mono text-sm text-bio/60 hover:text-bio transition-colors underline underline-offset-4">
-              Book a 15-min call →
-            </button>
-          </div>
+          <button type="button" data-cal-link="bayside-ai/15min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="w-full bg-coral px-10 py-5 font-mono text-base font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+            Claim Your Free Month →
+          </button>
+          <p className="mt-6 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-foam/40">
+            No commitment · First month free · Cancel anytime
+          </p>
+          <p className="mt-4 font-mono text-sm text-foam/50">
+            Prefer email? <a href="mailto:tyler@baysideai.co" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">tyler@baysideai.co</a>
+          </p>
         </div>
       </section>
 
@@ -324,7 +376,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Scroll reveal script */}
       <script dangerouslySetInnerHTML={{__html: `
         const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') }), {threshold:0.1});
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
