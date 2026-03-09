@@ -48,8 +48,8 @@ const tiers = [
   },
   {
     label: 'AI Assistant',
-    price: '$999–1,499',
-    setup: '$3,000 setup',
+    price: '$749–1,199',
+    setup: '$2,499 setup',
     items: ['Dedicated AI for your business', 'Unlimited automations', 'Connected to all your tools', 'Learns your business over time'],
     color: 'border-coral/40',
     tag: '3–4 automations = same cost',
