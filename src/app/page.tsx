@@ -240,6 +240,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CUSTOM BUILDS ── */}
+      <section className="px-6 py-24 md:py-32 bg-ocean-dark">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ custom builds ]</div>
+              <h2 className="font-mono text-display-lg font-bold text-foam mb-6">
+                Every business is different.<br/>
+                <span className="text-bio">We build accordingly.</span>
+              </h2>
+              <p className="font-sans text-base text-foam/60 leading-relaxed mb-6">
+                The tiers above are starting points — most of what we build is customized
+                to your tools, your workflow, and your specific situation. If you use a
+                particular PMS, CRM, or scheduling system, we build around it.
+              </p>
+              <p className="font-sans text-base text-foam/60 leading-relaxed mb-8">
+                No off-the-shelf solutions that half-fit. We scope the build on the call,
+                give you a clear timeline, and get it live fast.
+              </p>
+              <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
+                Talk Through Your Setup →
+              </button>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { title: 'Your tools', desc: 'We connect to whatever you already use — no switching required.' },
+                { title: 'Your workflow', desc: 'Built around how your team actually operates, not a generic template.' },
+                { title: 'Fast turnaround', desc: 'Most custom automations are live within 1–2 weeks.' },
+                { title: 'Flat pricing', desc: 'Custom scope, same transparent monthly pricing. No surprise bills.' },
+              ].map(item => (
+                <div key={item.title} className="bg-ocean-mid border border-bio/10 p-5">
+                  <div className="h-px w-6 bg-bio/40 mb-3"/>
+                  <h3 className="font-mono text-sm font-bold text-foam mb-2">{item.title}</h3>
+                  <p className="font-sans text-xs text-foam/60 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── WHO WE SERVE ── */}
       <section className="px-6 py-24 md:py-32 bg-ocean-dark">
         <div className="mx-auto max-w-5xl">
