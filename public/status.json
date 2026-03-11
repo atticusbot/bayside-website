@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-11T22:05:02.436490+00:00",
+  "updatedAt": "2026-03-11T23:05:03.122278+00:00",
   "projects": [
     {
       "id": "ocean-lodge",
@@ -107,7 +107,7 @@
           "output": "emails/sequences/",
           "startedAt": null,
           "completedAt": null,
-          "blockerNote": "StayNTouch meeting not yet scheduled",
+          "blockerNote": "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences.",
           "contentPreview": null,
           "contentFull": null
         },
@@ -158,7 +158,7 @@
         }
       ],
       "blockers": [
-        "StayNTouch meeting not yet scheduled"
+        "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences."
       ]
     },
     {
@@ -405,119 +405,119 @@
       "project": "Ocean Lodge",
       "type": "review",
       "description": "GBP content optimization \u2014 description, amenity tags, Q&A \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.434195+00:00"
+      "waitingSince": "2026-03-11T23:05:03.116611+00:00"
     },
     {
       "taskId": "OL-004",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Review response drafts \u2014 batch 1 \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.434695+00:00"
+      "waitingSince": "2026-03-11T23:05:03.118118+00:00"
     },
     {
       "taskId": "OL-005",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Website content outline + sitemap \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.434854+00:00"
+      "waitingSince": "2026-03-11T23:05:03.118952+00:00"
     },
     {
       "taskId": "OL-007",
       "project": "Ocean Lodge",
       "type": "blocked",
-      "description": "StayNTouch meeting not yet scheduled",
-      "waitingSince": "2026-03-11T22:05:02.434898+00:00"
+      "description": "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences.",
+      "waitingSince": "2026-03-11T23:05:03.119015+00:00"
     },
     {
       "taskId": "OL-008",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Front desk QR card design \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.434997+00:00"
+      "waitingSince": "2026-03-11T23:05:03.119154+00:00"
     },
     {
       "taskId": "OL-009",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Staff review request script \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435086+00:00"
+      "waitingSince": "2026-03-11T23:05:03.119272+00:00"
     },
     {
       "taskId": "OL-010",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Social content calendar \u2014 month 1 \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435216+00:00"
+      "waitingSince": "2026-03-11T23:05:03.120118+00:00"
     },
     {
       "taskId": "OCDA-004",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "GBP optimization plan \u2014 both entities \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435519+00:00"
+      "waitingSince": "2026-03-11T23:05:03.120577+00:00"
     },
     {
       "taskId": "OCDA-006",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Website copy fixes \u2014 brand name + meta + headings \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435657+00:00"
+      "waitingSince": "2026-03-11T23:05:03.120745+00:00"
     },
     {
       "taskId": "OCDA-007",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Content calendar \u2014 Month 1 (Instagram + TikTok) \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435814+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121347+00:00"
     },
     {
       "taskId": "OCDA-008",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Backlink opportunity list \u2014 Tier 1 quick wins \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.435968+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121584+00:00"
     },
     {
       "taskId": "OCDA-009",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Review velocity strategy \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.436101+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121784+00:00"
     },
     {
       "taskId": "OCDA-010",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "jetskirentaloceancity.com domain strategy \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.436201+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121923+00:00"
     },
     {
       "taskId": "OCDA-011",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Waiting on Mahdi to grant Google Ads access to tyler@baysideai.co",
-      "waitingSince": "2026-03-11T22:05:02.436224+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121952+00:00"
     },
     {
       "taskId": "OCDA-012",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Meeting with website guy Thursday 2:30",
-      "waitingSince": "2026-03-11T22:05:02.436242+00:00"
+      "waitingSince": "2026-03-11T23:05:03.121977+00:00"
     },
     {
       "taskId": "OCDA-014",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Digital waiver system \u2014 full build (6 steps) \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.436298+00:00"
+      "waitingSince": "2026-03-11T23:05:03.122055+00:00"
     },
     {
       "taskId": "OCDA-015",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Draft waiver legal text \u2014 Maryland watersports template \u2014 ready for review",
-      "waitingSince": "2026-03-11T22:05:02.436480+00:00"
+      "waitingSince": "2026-03-11T23:05:03.122266+00:00"
     }
   ]
 }
