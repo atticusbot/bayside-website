@@ -16,13 +16,15 @@ export async function POST(req: NextRequest) {
   }
 
   const res = NextResponse.json({ ok: true });
-  res.cookies.set("dashboard_auth", correct, {
+  const cookieOpts = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/dashboard",
+    sameSite: "lax" as const,
     maxAge: 60 * 60 * 24 * 7, // 7 days
-  });
+  };
+  // Set cookie for both /dashboard and /api/dashboard-action paths
+  res.cookies.set("dashboard_auth", correct, { ...cookieOpts, path: "/dashboard" });
+  res.cookies.set("dashboard_auth", correct, { ...cookieOpts, path: "/api/dashboard-action" });
 
   return res;
 }

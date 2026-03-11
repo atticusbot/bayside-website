@@ -78,6 +78,10 @@ export default function DashboardPage() {
     (s, p) => s + p.tasks.filter((t) => t.status === "in-progress").length,
     0
   );
+  const reviewCount = data.projects.reduce(
+    (s, p) => s + p.tasks.filter((t) => t.status === "review").length,
+    0
+  );
   const blockedCount = data.tylerNeeded.filter((t) => t.type === "blocked").length;
 
   return (
@@ -103,10 +107,11 @@ export default function DashboardPage() {
         </div>
 
         {/* Stats bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
           <StatBox label="Total Tasks" value={totalTasks} />
           <StatBox label="Done" value={doneTasks} accent="text-green-400" />
           <StatBox label="In Progress" value={inProgress} accent="text-bio" />
+          <StatBox label="Review" value={reviewCount} accent="text-yellow-400" />
           <StatBox label="Blocked" value={blockedCount} accent="text-coral" />
         </div>
 

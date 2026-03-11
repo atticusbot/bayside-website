@@ -10,6 +10,8 @@ export interface Task {
   startedAt: string | null;
   completedAt: string | null;
   blockerNote: string | null;
+  contentPreview?: string;
+  contentFull?: string;
 }
 
 export interface Blocker {

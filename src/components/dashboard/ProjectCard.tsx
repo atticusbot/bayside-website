@@ -23,16 +23,26 @@ function lastActivity(project: Project): string {
 const columns = [
   { key: "ready", label: "Ready" },
   { key: "in-progress", label: "In Progress" },
-  { key: "review", label: "Review" },
+  { key: "review", label: "Awaiting Review" },
   { key: "done", label: "Done" },
 ] as const;
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
+  // Optimistic: tasks confirmed via UI move to "done" visually
+  const [confirmedIds, setConfirmedIds] = useState<Set<string>>(new Set());
 
-  const done = project.tasks.filter((t) => t.status === "done").length;
-  const total = project.tasks.length;
+  const effectiveTasks = project.tasks.map((t) =>
+    confirmedIds.has(t.id) ? { ...t, status: "done" as const } : t
+  );
+
+  const done = effectiveTasks.filter((t) => t.status === "done").length;
+  const total = effectiveTasks.length;
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+  function handleConfirmed(taskId: string) {
+    setConfirmedIds((prev) => new Set(prev).add(taskId));
+  }
 
   return (
     <div className="rounded-lg border border-ocean-light/40 bg-ocean-mid/50">
@@ -77,18 +87,36 @@ export default function ProjectCard({ project }: { project: Project }) {
           {/* Kanban columns */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
             {columns.map((col) => {
-              const tasks = project.tasks.filter((t) => t.status === col.key);
+              const tasks = effectiveTasks.filter((t) => t.status === col.key);
+              const isReviewCol = col.key === "review";
               return (
                 <div key={col.key}>
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="text-xs font-semibold text-foam/50 uppercase tracking-wider">
+                    <h4
+                      className={`text-xs font-semibold uppercase tracking-wider ${
+                        isReviewCol ? "text-yellow-400" : "text-foam/50"
+                      }`}
+                    >
                       {col.label}
                     </h4>
-                    <span className="text-xs font-mono text-foam/30">{tasks.length}</span>
+                    <span
+                      className={`text-xs font-mono ${
+                        isReviewCol && tasks.length > 0
+                          ? "text-yellow-400"
+                          : "text-foam/30"
+                      }`}
+                    >
+                      {tasks.length}
+                    </span>
                   </div>
                   <div className="space-y-2">
                     {tasks.map((task) => (
-                      <TaskCard key={task.id} task={task} />
+                      <TaskCard
+                        key={task.id}
+                        task={task}
+                        projectId={project.id}
+                        onConfirmed={handleConfirmed}
+                      />
                     ))}
                     {tasks.length === 0 && (
                       <p className="text-xs text-foam/20 italic py-2">None</p>
