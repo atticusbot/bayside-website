@@ -22,9 +22,8 @@ export async function POST(req: NextRequest) {
     sameSite: "lax" as const,
     maxAge: 60 * 60 * 24 * 7, // 7 days
   };
-  // Set cookie for both /dashboard and /api/dashboard-action paths
-  res.cookies.set("dashboard_auth", correct, { ...cookieOpts, path: "/dashboard" });
-  res.cookies.set("dashboard_auth", correct, { ...cookieOpts, path: "/api/dashboard-action" });
+  // Set cookie with root path so it works for both /dashboard and /api/dashboard-action
+  res.cookies.set("dashboard_auth", correct, { ...cookieOpts, path: "/" });
 
   return res;
 }
