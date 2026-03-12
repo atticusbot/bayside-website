@@ -21,28 +21,24 @@ function lastActivity(project: Project): string {
 }
 
 const columns = [
+  { key: "queued", label: "Queued" },
   { key: "ready", label: "Ready" },
   { key: "in-progress", label: "In Progress" },
   { key: "review", label: "Awaiting Review" },
   { key: "done", label: "Done" },
 ] as const;
 
-export default function ProjectCard({ project }: { project: Project }) {
+interface ProjectCardProps {
+  project: Project;
+  onRefetch?: () => void;
+}
+
+export default function ProjectCard({ project, onRefetch }: ProjectCardProps) {
   const [expanded, setExpanded] = useState(false);
-  // Optimistic: tasks confirmed via UI move to "done" visually
-  const [confirmedIds, setConfirmedIds] = useState<Set<string>>(new Set());
 
-  const effectiveTasks = project.tasks.map((t) =>
-    confirmedIds.has(t.id) ? { ...t, status: "done" as const } : t
-  );
-
-  const done = effectiveTasks.filter((t) => t.status === "done").length;
-  const total = effectiveTasks.length;
+  const done = project.tasks.filter((t) => t.status === "done").length;
+  const total = project.tasks.length;
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
-
-  function handleConfirmed(taskId: string) {
-    setConfirmedIds((prev) => new Set(prev).add(taskId));
-  }
 
   return (
     <div className="rounded-lg border border-ocean-light/40 bg-ocean-mid/50">
@@ -85,9 +81,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       {expanded && (
         <div className="px-4 pb-4 border-t border-ocean-light/20">
           {/* Kanban columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 mt-4">
             {columns.map((col) => {
-              const tasks = effectiveTasks.filter((t) => t.status === col.key);
+              const tasks = project.tasks.filter((t) => t.status === col.key);
               const isReviewCol = col.key === "review";
               return (
                 <div key={col.key}>
@@ -115,7 +111,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                         key={task.id}
                         task={task}
                         projectId={project.id}
-                        onConfirmed={handleConfirmed}
+                        onRefetch={onRefetch}
                       />
                     ))}
                     {tasks.length === 0 && (

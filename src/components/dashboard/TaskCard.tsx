@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Task } from "./types";
 
 const tierColors: Record<Task["tier"], { dot: string; border: string }> = {
@@ -9,25 +9,9 @@ const tierColors: Record<Task["tier"], { dot: string; border: string }> = {
   red: { dot: "bg-coral", border: "border-coral/20" },
 };
 
-const CONFIRMED_KEY = "dashboard_confirmed_tasks";
-const FEEDBACK_SENT_KEY = "dashboard_feedback_sent_tasks";
-
-function getStoredSet(key: string): Set<string> {
-  if (typeof window === "undefined") return new Set();
-  try {
-    return new Set(JSON.parse(localStorage.getItem(key) || "[]"));
-  } catch {
-    return new Set();
-  }
-}
-
-function storeSet(key: string, set: Set<string>) {
-  localStorage.setItem(key, JSON.stringify(Array.from(set)));
-}
-
 function timeInState(task: Task): string | null {
   let since: string | null = null;
-  if (task.status === "done") return null;
+  if (task.status === "done" || task.status === "queued") return null;
   if (task.status === "in-progress" || task.status === "review") {
     since = task.startedAt;
   }
@@ -43,7 +27,6 @@ function timeInState(task: Task): string | null {
 }
 
 function SimpleMarkdown({ content }: { content: string }) {
-  // Minimal markdown renderer: headers, bold, lists, paragraphs
   const lines = content.split("\n");
   const elements: React.ReactNode[] = [];
   let i = 0;
@@ -96,7 +79,6 @@ function SimpleMarkdown({ content }: { content: string }) {
 }
 
 function InlineMarkdown({ text }: { text: string }) {
-  // Handle **bold** and `code`
   const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
   return (
     <>
@@ -127,32 +109,28 @@ function InlineMarkdown({ text }: { text: string }) {
 interface TaskCardProps {
   task: Task;
   projectId: string;
-  onConfirmed?: (taskId: string) => void;
+  onRefetch?: () => void;
 }
 
-export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps) {
+export default function TaskCard({ task, projectId, onRefetch }: TaskCardProps) {
   const colors = tierColors[task.tier];
   const elapsed = timeInState(task);
   const isReview = task.status === "review";
+  const isDone = task.status === "done";
+  const hasFeedback = task.feedback && task.feedback.length > 0;
 
-  const [confirmed, setConfirmed] = useState(false);
   const [confirming, setConfirming] = useState(false);
-  const [feedbackSent, setFeedbackSent] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [submittingFeedback, setSubmittingFeedback] = useState(false);
   const [showFullContent, setShowFullContent] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
 
-  // Hydrate from localStorage
-  useEffect(() => {
-    setConfirmed(getStoredSet(CONFIRMED_KEY).has(task.id));
-    setFeedbackSent(getStoredSet(FEEDBACK_SENT_KEY).has(task.id));
-  }, [task.id]);
-
   const borderClass = isReview
     ? "border-yellow-500/40"
-    : colors.border;
+    : task.status === "queued"
+      ? "border-foam/20"
+      : colors.border;
 
   async function handleConfirm() {
     setConfirming(true);
@@ -171,11 +149,7 @@ export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps
         const err = await res.json();
         throw new Error(err.error || "Request failed");
       }
-      setConfirmed(true);
-      const set = getStoredSet(CONFIRMED_KEY);
-      set.add(task.id);
-      storeSet(CONFIRMED_KEY, set);
-      onConfirmed?.(task.id);
+      onRefetch?.();
     } catch (err) {
       setActionError(err instanceof Error ? err.message : "Failed");
     } finally {
@@ -202,12 +176,9 @@ export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps
         const err = await res.json();
         throw new Error(err.error || "Request failed");
       }
-      setFeedbackSent(true);
       setShowFeedback(false);
       setFeedback("");
-      const set = getStoredSet(FEEDBACK_SENT_KEY);
-      set.add(task.id);
-      storeSet(FEEDBACK_SENT_KEY, set);
+      onRefetch?.();
     } catch (err) {
       setActionError(err instanceof Error ? err.message : "Failed");
     } finally {
@@ -220,14 +191,19 @@ export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps
       <div className="flex items-center gap-1.5 mb-1">
         <span className={`inline-block h-1.5 w-1.5 rounded-full ${colors.dot} flex-shrink-0`} />
         <span className="font-mono text-[10px] text-foam/50">{task.id}</span>
-        {isReview && feedbackSent && !confirmed && (
+        {isReview && hasFeedback && !isDone && (
           <span className="text-[10px] bg-yellow-500/20 text-yellow-400 px-1.5 py-0.5 rounded-full ml-auto">
             Feedback sent
           </span>
         )}
-        {confirmed && (
+        {isDone && (
           <span className="text-[10px] bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded-full ml-auto">
             Confirmed
+          </span>
+        )}
+        {task.status === "queued" && (
+          <span className="text-[10px] bg-foam/10 text-foam/50 px-1.5 py-0.5 rounded-full ml-auto">
+            Queued
           </span>
         )}
       </div>
@@ -247,8 +223,20 @@ export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps
         </p>
       )}
 
+      {/* Feedback history */}
+      {hasFeedback && (
+        <div className="mt-2 space-y-1">
+          <p className="text-[10px] text-foam/40 uppercase tracking-wider">Feedback</p>
+          {task.feedback!.map((fb, i) => (
+            <div key={i} className="rounded bg-yellow-500/5 border border-yellow-500/20 px-2 py-1">
+              <p className="text-[10px] text-foam/60">{fb}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Review-specific: content preview + actions */}
-      {isReview && !confirmed && (
+      {isReview && (
         <div className="mt-2.5 space-y-2">
           {/* Content preview */}
           {task.contentPreview && (
@@ -282,15 +270,14 @@ export default function TaskCard({ task, projectId, onConfirmed }: TaskCardProps
             </button>
             <button
               onClick={() => setShowFeedback(!showFeedback)}
-              disabled={feedbackSent}
               className="flex-1 px-2.5 py-1.5 rounded text-[11px] font-medium bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/30 disabled:opacity-50 transition-colors"
             >
-              {feedbackSent ? "Feedback sent" : "Iterate \uD83D\uDD04"}
+              Iterate 🔄
             </button>
           </div>
 
           {/* Feedback input */}
-          {showFeedback && !feedbackSent && (
+          {showFeedback && (
             <div className="space-y-1.5">
               <textarea
                 value={feedback}

@@ -1,7 +1,7 @@
 export interface Task {
   id: string;
   title: string;
-  status: "ready" | "in-progress" | "review" | "done";
+  status: "queued" | "ready" | "in-progress" | "review" | "done";
   tier: "green" | "yellow" | "red";
   description: string;
   assignee: string;
@@ -12,6 +12,8 @@ export interface Task {
   blockerNote: string | null;
   contentPreview?: string;
   contentFull?: string;
+  spawns?: string[];
+  feedback?: string[];
 }
 
 export interface Blocker {
@@ -50,4 +52,5 @@ export interface StatusData {
   projects: Project[];
   agentActivity: AgentActivityEntry[];
   tylerNeeded: TylerNeededEntry[];
+  taskTemplates?: Record<string, Omit<Task, 'status' | 'completedAt' | 'startedAt'>>;
 }

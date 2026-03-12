@@ -25,7 +25,7 @@ export default function DashboardPage() {
 
   const fetchStatus = useCallback(async () => {
     try {
-      const res = await fetch(`/status.json?t=${Date.now()}`);
+      const res = await fetch(`/api/status?t=${Date.now()}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json: StatusData = await res.json();
       setData(json);
@@ -82,6 +82,10 @@ export default function DashboardPage() {
     (s, p) => s + p.tasks.filter((t) => t.status === "review").length,
     0
   );
+  const queuedCount = data.projects.reduce(
+    (s, p) => s + p.tasks.filter((t) => t.status === "queued").length,
+    0
+  );
   const blockedCount = data.tylerNeeded.filter((t) => t.type === "blocked").length;
 
   return (
@@ -107,11 +111,12 @@ export default function DashboardPage() {
         </div>
 
         {/* Stats bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 mb-8">
           <StatBox label="Total Tasks" value={totalTasks} />
           <StatBox label="Done" value={doneTasks} accent="text-green-400" />
           <StatBox label="In Progress" value={inProgress} accent="text-bio" />
           <StatBox label="Review" value={reviewCount} accent="text-yellow-400" />
+          <StatBox label="Queued" value={queuedCount} accent="text-foam/60" />
           <StatBox label="Blocked" value={blockedCount} accent="text-coral" />
         </div>
 
@@ -133,7 +138,7 @@ export default function DashboardPage() {
           </h2>
           <div className="space-y-3">
             {data.projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard key={project.id} project={project} onRefetch={fetchStatus} />
             ))}
           </div>
         </section>

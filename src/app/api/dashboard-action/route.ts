@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+import { kv } from "@vercel/kv";
+import { StatusData, Task } from "@/components/dashboard/types";
+
+const KV_KEY = "dashboard:status";
 
 interface ActionPayload {
   action: "confirm" | "iterate";
@@ -39,13 +43,61 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const entry = {
-    timestamp: new Date().toISOString(),
-    action: body.action,
-    taskId: body.taskId,
-    projectId: body.projectId,
-    ...(body.feedback ? { feedback: body.feedback } : {}),
-  };
+  // Read state from KV
+  let data: StatusData | null = null;
+  try {
+    data = await kv.get<StatusData>(KV_KEY);
+  } catch {
+    console.error("KV read failed");
+  }
+
+  // Update state if KV data exists
+  if (data) {
+    const project = data.projects.find((p) => p.id === body.projectId);
+    const task = project?.tasks.find((t) => t.id === body.taskId);
+
+    if (project && task) {
+      if (body.action === "confirm") {
+        task.status = "done";
+        task.completedAt = new Date().toISOString();
+
+        // Remove from tylerNeeded
+        data.tylerNeeded = data.tylerNeeded.filter(
+          (t) => !(t.taskId === body.taskId && t.project === project.name)
+        );
+
+        // Task cascading: spawn successor tasks from templates
+        if (task.spawns && task.spawns.length > 0 && data.taskTemplates) {
+          for (const templateId of task.spawns) {
+            const template = data.taskTemplates[templateId];
+            if (template) {
+              const newTask: Task = {
+                ...template,
+                status: "queued",
+                startedAt: null,
+                completedAt: null,
+              };
+              project.tasks.push(newTask);
+            }
+          }
+        }
+      } else if (body.action === "iterate") {
+        // Keep in review, append feedback
+        if (!task.feedback) {
+          task.feedback = [];
+        }
+        task.feedback.push(body.feedback!.trim());
+      }
+
+      data.updatedAt = new Date().toISOString();
+
+      try {
+        await kv.set(KV_KEY, data);
+      } catch {
+        console.error("KV write failed");
+      }
+    }
+  }
 
   // Send to Discord webhook if configured
   const webhookUrl = process.env.DASHBOARD_WEBHOOK_URL;
@@ -71,5 +123,5 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  return NextResponse.json({ ok: true, entry });
+  return NextResponse.json({ ok: true });
 }
