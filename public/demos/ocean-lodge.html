@@ -497,17 +497,27 @@
     /* ── Photo Reel ─────────────────────────────────── */
     .photo-reel { position: relative; margin-bottom: 24px; }
     .photo-reel-track {
-      display: flex; overflow: hidden; border-radius: 10px; gap: 0;
+      display: flex; gap: 10px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
     }
+    .photo-reel-track::-webkit-scrollbar { display: none; }
     .photo-slide {
-      min-width: 100%; aspect-ratio: 16/9;
+      flex: 0 0 48%; aspect-ratio: 4/3;
+      scroll-snap-align: start;
       background: var(--cream); border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; color: var(--text-muted);
       border: 1.5px dashed var(--sand-light);
       text-align: center; padding: 12px; line-height: 1.5;
-      flex-shrink: 0;
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden; flex-shrink: 0;
+    }
+    .photo-slide img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center center;
+      border-radius: 10px; display: block; padding: 0;
     }
     .reel-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
@@ -1046,14 +1056,18 @@
       <p class="modal-desc">Our original building — full of character, steps from the boardwalk. Rooms are cozy and no-frills. Select units have kitchenettes; our first-floor apartment is a standout with a private porch, full kitchen, and space for the whole family.</p>
       <div class="photo-reel" data-reel="south">
         <div class="photo-reel-track">
-          <div class="photo-slide">Photo 1 — Building exterior</div>
-          <div class="photo-slide">Photo 2 — Standard room</div>
-          <div class="photo-slide">Photo 3 — First-floor apartment</div>
+          <div class="photo-slide"><img src="assets/south-exterior.jpg" alt="Ocean Lodge South exterior"></div>
+          <div class="photo-slide"><img src="assets/south-room-king.jpg" alt="King room"></div>
+          <div class="photo-slide"><img src="assets/south-room-double.jpg" alt="Double queen room"></div>
+          <div class="photo-slide"><img src="assets/south-suite-living.jpg" alt="Suite living area with kitchenette"></div>
+          <div class="photo-slide"><img src="assets/south-room-attic.jpg" alt="Cozy attic bedroom"></div>
         </div>
         <button class="reel-btn reel-prev" aria-label="Previous photo">‹</button>
         <button class="reel-btn reel-next" aria-label="Next photo">›</button>
         <div class="reel-dots">
           <div class="reel-dot active"></div>
+          <div class="reel-dot"></div>
+          <div class="reel-dot"></div>
           <div class="reel-dot"></div>
           <div class="reel-dot"></div>
         </div>
@@ -1362,37 +1376,13 @@
     })();
 
     // ── Photo Reel ───────────────────────────────────
+    // CSS scroll-snap handles everything — just hide controls on image reels
     document.querySelectorAll('.photo-reel').forEach(reel => {
-      const track  = reel.querySelector('.photo-reel-track');
-      const slides = reel.querySelectorAll('.photo-slide');
-      const dots   = reel.querySelectorAll('.reel-dot');
-      const prev   = reel.querySelector('.reel-prev');
-      const next   = reel.querySelector('.reel-next');
-      let current  = 0;
-
-      function goTo(i) {
-        current = (i + slides.length) % slides.length;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+      const hasImages = reel.querySelector('.photo-slide img');
+      if (hasImages) {
+        const el = reel.querySelector('.reel-btn, .reel-dots');
+        reel.querySelectorAll('.reel-btn, .reel-dots').forEach(e => e.style.display = 'none');
       }
-
-      prev.addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
-      next.addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
-      dots.forEach((dot, idx) => dot.addEventListener('click', e => { e.stopPropagation(); goTo(idx); }));
-
-      // Swipe support
-      let startX = 0;
-      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend', e => {
-        const diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-      });
-    });
-
-    // Make photo-reel-track use overflow:hidden properly
-    document.querySelectorAll('.photo-reel-track').forEach(track => {
-      track.style.display = 'flex';
-      track.style.transition = 'transform 0.35s cubic-bezier(0.4,0,0.2,1)';
     });
 
     // ── Home Accordions (Policies / FAQ) ──────────────
