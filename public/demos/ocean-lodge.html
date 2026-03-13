@@ -1014,17 +1014,14 @@
       <p class="modal-desc">Our flagship property. A classic Ocean City beach hotel with all the personality you'd hope to find. Every room has a microwave and refrigerator so you can keep snacks cold and reheat leftovers from the boardwalk. Two-minute walk to the sand — the noise stays behind when you close your door.</p>
       <div class="photo-reel" data-reel="north">
         <div class="photo-reel-track">
-          <div class="photo-slide">Photo 1 — Exterior / Front of building</div>
-          <div class="photo-slide">Photo 2 — Kitchenette</div>
-          <div class="photo-slide">Photo 3 — Room interior</div>
+          <div class="photo-slide"><img src="assets/north-room-double.jpg" alt="Double queen room"></div>
+          <div class="photo-slide"><img src="assets/north-room-suite.jpg" alt="Suite with kitchenette and seating area"></div>
+          <div class="photo-slide"><img src="assets/north-room-king.jpg" alt="King room with bathroom"></div>
+          <div class="photo-slide"><img src="assets/north-bathroom.jpg" alt="Private bathroom"></div>
         </div>
         <button class="reel-btn reel-prev" aria-label="Previous photo">‹</button>
         <button class="reel-btn reel-next" aria-label="Next photo">›</button>
-        <div class="reel-dots">
-          <div class="reel-dot active"></div>
-          <div class="reel-dot"></div>
-          <div class="reel-dot"></div>
-        </div>
+        <div class="reel-dots"></div>
       </div>
       <div class="modal-amenities">
         <h3>What's Included</h3>
@@ -1111,16 +1108,7 @@
       <p class="modal-desc">Built for groups, families, and anyone who plans to actually stay a while. Full apartment suites with real kitchens — stovetop, oven, dishwasher, the works. Separate living areas and enough space that a group can share without losing their minds. Pets welcome. Same short walk to the boardwalk.</p>
       <div class="photo-reel" data-reel="mallard">
         <div class="photo-reel-track">
-          <div class="photo-slide">Photo 1 — Living area</div>
-          <div class="photo-slide">Photo 2 — Full kitchen</div>
-          <div class="photo-slide">Photo 3 — Bedroom</div>
-        </div>
-        <button class="reel-btn reel-prev" aria-label="Previous photo">‹</button>
-        <button class="reel-btn reel-next" aria-label="Next photo">›</button>
-        <div class="reel-dots">
-          <div class="reel-dot active"></div>
-          <div class="reel-dot"></div>
-          <div class="reel-dot"></div>
+          <div class="photo-slide" style="font-size:15px; color: var(--navy); border-color: var(--sand);">📸 Photos coming soon!<br><span style="font-size:12px; color:var(--text-muted); margin-top:6px; display:block;">We're getting the camera out this season.</span></div>
         </div>
       </div>
       <div class="modal-amenities">
@@ -1376,12 +1364,57 @@
     })();
 
     // ── Photo Reel ───────────────────────────────────
-    // CSS scroll-snap handles everything — just hide controls on image reels
     document.querySelectorAll('.photo-reel').forEach(reel => {
+      const track = reel.querySelector('.photo-reel-track');
       const hasImages = reel.querySelector('.photo-slide img');
-      if (hasImages) {
-        const el = reel.querySelector('.reel-btn, .reel-dots');
-        reel.querySelectorAll('.reel-btn, .reel-dots').forEach(e => e.style.display = 'none');
+
+      // Hide prev/next/dots — not needed for scroll-snap reels
+      reel.querySelectorAll('.reel-btn, .reel-dots').forEach(e => e.style.display = 'none');
+
+      if (!hasImages) return; // placeholder reels — nothing to do
+
+      // Gentle auto-scroll for desktop (1px every 30ms = ~33px/sec)
+      let autoScrollInterval = null;
+      let isPaused = false;
+
+      function startAutoScroll() {
+        if (autoScrollInterval) return;
+        autoScrollInterval = setInterval(() => {
+          if (isPaused) return;
+          // If at end, snap back to start smoothly
+          if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 2) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            track.scrollLeft += 1;
+          }
+        }, 30);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = null;
+      }
+
+      // Pause on hover/touch
+      reel.addEventListener('mouseenter', () => { isPaused = true; });
+      reel.addEventListener('mouseleave', () => { isPaused = false; });
+      reel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      reel.addEventListener('touchend', () => {
+        setTimeout(() => { isPaused = false; }, 2000); // resume 2s after touch
+      }, { passive: true });
+
+      // Only start auto-scroll when modal opens
+      const modalOverlay = reel.closest('.modal-overlay');
+      if (modalOverlay) {
+        const observer = new MutationObserver(() => {
+          if (modalOverlay.classList.contains('open')) {
+            startAutoScroll();
+          } else {
+            stopAutoScroll();
+            track.scrollLeft = 0;
+          }
+        });
+        observer.observe(modalOverlay, { attributes: true, attributeFilter: ['class'] });
       }
     });
 
