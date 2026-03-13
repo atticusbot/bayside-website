@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-13T19:05:02.491977+00:00",
+  "updatedAt": "2026-03-13T20:06:30.505028+00:00",
   "projects": [
     {
       "id": "ocean-lodge",
@@ -99,7 +99,7 @@
         {
           "id": "OL-007",
           "title": "Email sequence drafts \u2014 all 3",
-          "status": "blocked",
+          "status": "in-progress",
           "tier": "yellow",
           "description": "Pre-arrival, post-stay, and review request sequences (3-5 emails each)\n- **Acceptance:** `emails/sequences/` \u2014 one file per sequence",
           "assignee": "subagent",
@@ -107,7 +107,7 @@
           "output": "emails/sequences/",
           "startedAt": null,
           "completedAt": null,
-          "blockerNote": "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences.",
+          "blockerNote": null,
           "contentPreview": null,
           "contentFull": null
         },
@@ -157,9 +157,7 @@
           "contentFull": "# Ocean Lodge \u2014 Social Content Calendar: Month 1\n*Platform: Instagram + Facebook (cross-post unless noted). 3 posts/week \u00d7 4 weeks = 12 posts.*\n*All captions are under 2,200 characters. Hashtags: 10\u201315 per post, relevant and not spammy.*\n\n---\n\n## WEEK 1\n\n---\n\n### POST 1\n**Platform:** Instagram + Facebook\n**Format:** Carousel (3\u20134 images) \u2014 property/location\n**Posting time:** Tuesday 10:00 AM ET\n\n**Caption:**\nTwo blocks from the boardwalk. Real kitchens. No resort fees.\n\nThat's the Ocean Lodge formula \u2014 and it's been working for families, couples, and solo beach wanderers for decades.\n\nOcean Lodge North, Ocean Lodge South, and Mallard Apartments are all a short walk from the sand. You can hear the ocean on a quiet morning. The boardwalk is genuinely close enough that you'll make that walk more than you planned.\n\nIf you've been looking for a place to actually *stay* in Ocean City \u2014 not just sleep in it \u2014 this is worth a look.\n\nBook direct at the link in bio and save 10%.\n\n**Hashtags:**\n#OceanCityMD #OCMaryland #OceanLodge #BeachVacation #OceanCityBoardwalk #MarylandBeach #BeachHotel #OceanCityHotel #BookDirect #BeachStay #MDVacation #FamilyTravel #ChesapeakeBay\n\n---\n\n### POST 2\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 direct booking value post\n**Posting time:** Thursday 5:00 PM ET\n\n**Caption:**\nA friendly reminder that booking directly with us saves you 10%.\n\nNo extra fees. No third-party markup. And if something comes up with your reservation, you're talking to us \u2014 not a help center.\n\nThat 10% is real money. On a week-long stay it can cover a couple of decent dinners. We'd rather that stay in your pocket than go to a platform that didn't do anything for your trip.\n\nBook at oceanlodgeocmd.com.\n\n**Hashtags:**\n#BookDirect #OceanCityMD #DirectBooking #SaveMore #OceanLodge #OceanCityHotel #BeachVacation #HotelTips #TravelSmart #MDVacation #IndependentHotel #OceanCity #BeachTrip\n\n---\n\n### POST 3\n**Platform:** Instagram\n**Format:** Single image or short Reel \u2014 local OC content\n**Posting time:** Saturday 9:00 AM ET\n\n**Caption:**\nThe Ocean City boardwalk on an early Saturday morning before the crowds arrive.\n\nThis is the version of OC that regulars know \u2014 and staying two blocks away means you can actually be here for it.\n\nCoffee from the room. Quiet walk down to the water. Back for eggs before the rest of the world wakes up.\n\nThat's the trip.\n\n**Hashtags:**\n#OceanCityBoardwalk #OceanCityMD #EarlyMorning #BoardwalkLife #OCMaryland #BeachMorning #MarylandBeach #CoastalLiving #BeachWalk #SummerMorning #OceanLodge #BoardwalkVibes #MDShore\n\n---\n\n## WEEK 2\n\n---\n\n### POST 4\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 review highlight (screenshot or designed quote)\n**Posting time:** Tuesday 10:00 AM ET\n\n**Caption:**\n\"The kitchen made all the difference. We cooked almost every breakfast and came back for lunch half the days. Saved so much money and the kids were way happier than if we'd been eating out constantly.\" \u2b50\u2b50\u2b50\u2b50\u2b50\n\nThis is the thing we hear most from guests with families. The kitchen isn't a \"nice bonus\" \u2014 it's the whole point.\n\nEvery Ocean Lodge unit has a full kitchen: stove, fridge, microwave, cookware, coffee maker. Everything you need to actually use it.\n\n**Hashtags:**\n#GuestReview #FamilyTravel #OceanCityMD #OceanLodge #BeachFamily #KitchenSuite #VacationRental #OceanCityHotel #TravelWithKids #SaveOnTravel #MDVacation #DirectBooking #BeachStay\n\n---\n\n### POST 5\n**Platform:** Instagram + Facebook\n**Format:** Behind-the-scenes Reel or image \u2014 personality/staff\n**Posting time:** Thursday 5:00 PM ET\n\n**Caption:**\nEvery summer, we flip hundreds of rooms. Stock kitchens, make beds, scrub bathrooms, run towels.\n\nIt's not glamorous. But this is what a family-owned hotel actually looks like behind the scenes \u2014 people who care, running a place they're proud of.\n\nIf you've ever had a stay where something felt genuinely taken care of (or the opposite), that feeling traces back to a decision someone made about how to run the property.\n\nWe're working on the right side of that every day.\n\n**Hashtags:**\n#FamilyOwned #IndependentHotel #OceanLodge #BehindTheScenes #HotelLife #OceanCityMD #BeachHotel #HospitalityLife #SmallBusiness #OCMaryland #BeachVacation #MarylandBeach #HotelTeam\n\n---\n\n### POST 6\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 property showcase (Mallard Apartments)\n**Posting time:** Saturday 11:00 AM ET\n\n**Caption:**\nMallard Apartments \u2014 for when a hotel room just isn't going to cut it.\n\nFull apartment-style suites with multiple bedrooms, separate living areas, and real full-size kitchen setups. If you're coming with a group or planning a longer stay, this is the unit that makes the numbers work.\n\nFamilies, reunion groups, and anyone who wants space to actually spread out.\n\nStill two blocks from the boardwalk. Still booking direct saves you 10%.\n\nDetails at the link in bio.\n\n**Hashtags:**\n#MallardApartments #OceanLodge #OceanCityMD #GroupTravel #FamilyVacation #BeachApartment #ExtendedStay #OceanCityHotel #BeachVacation #MDVacation #VacationSuite #DirectBooking #OceanCity\n\n---\n\n## WEEK 3\n\n---\n\n### POST 7\n**Platform:** Instagram\n**Format:** Reel or carousel \u2014 property showcase (Ocean Lodge North)\n**Posting time:** Tuesday 10:00 AM ET\n\n**Caption:**\nOcean Lodge North \u2014 the one with character.\n\nClassic beach hotel. Fully equipped kitchens in every room. Walking distance to the boardwalk, the water, and every seafood shack and pizza place you'll want to try.\n\nThis is the building that started it all for us. Book direct and save 10%.\n\nLink in bio.\n\n**Hashtags:**\n#OceanLodgeNorth #OceanLodge #OceanCityMD #BeachHotel #ClassicBeach #OceanCityBoardwalk #OCMaryland #BeachVacation #DirectBooking #KitchenSuite #MDVacation #MarylandBeach #BeachTrip\n\n---\n\n### POST 8\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 boardwalk / local content\n**Posting time:** Thursday 5:00 PM ET\n\n**Caption:**\nThe Ocean City boardwalk is 3 miles of exactly what you come for.\n\nFunnel cake. Thrasher's fries. The smell of salt air on a hot afternoon. Neon lights at night. Families. Couples. People who've been making this trip for 30 years.\n\nIt's kitschy and it's wonderful and it doesn't apologize for either.\n\nWe're two blocks from all of it. Come see us this summer.\n\n**Hashtags:**\n#OceanCityBoardwalk #OceanCityMD #OCMaryland #BoardwalkLife #BeachSummer #ThrashersFries #OceanCity #MarylandBeach #BeachVacation #SummerVibes #CoastalMaryland #OceanLodge #BeachLife\n\n---\n\n### POST 9\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 property showcase (Ocean Lodge South + balconies)\n**Posting time:** Saturday 9:00 AM ET\n\n**Caption:**\nSome things are better from a balcony.\n\nSelect rooms at Ocean Lodge South have private balconies \u2014 a little more breathing room, a little more quiet, the same easy walk to everything.\n\nIf you're looking for a more relaxed version of the Ocean City stay, South is worth requesting.\n\nBook direct at oceanlodgeocmd.com.\n\n**Hashtags:**\n#OceanLodgeSouth #Balcony #OceanCityMD #OceanLodge #BeachHotel #BeachBalcony #QuietStay #OceanCityHotel #MDVacation #BeachVacation #DirectBooking #PrivateBalcony #CoastalStay\n\n---\n\n## WEEK 4\n\n---\n\n### POST 10\n**Platform:** Instagram + Facebook\n**Format:** Carousel or graphic \u2014 special offer\n**Posting time:** Tuesday 10:00 AM ET\n\n**Caption:**\nSummer's coming faster than it feels like it is.\n\nIf you're planning an Ocean City trip for June, July, or August \u2014 now is the right time to lock in your dates. Availability tightens fast once Memorial Day hits.\n\nBook direct at oceanlodgeocmd.com to get our best rate (10% off vs. third-party sites) and have a real person you can contact if anything changes.\n\nNo rush \u2014 but also: don't sleep on it.\n\n**Hashtags:**\n#SummerPlanning #OceanCityMD #BookEarly #BeachVacation #OceanLodge #SummerTravel #OCMaryland #BeachHotel #DirectBooking #MarylandBeach #SummerBooking #FamilyTravel #OceanCity\n\n---\n\n### POST 11\n**Platform:** Instagram + Facebook\n**Format:** Reel or image \u2014 boardwalk/location (golden hour shot)\n**Posting time:** Thursday 5:00 PM ET\n\n**Caption:**\nGolden hour over Ocean City hits different when you're two blocks from it.\n\nThis is the part of the day we never get tired of. The light, the quiet before the evening crowd, the smell of the ocean when the sun starts to go down.\n\nWe're grateful we get to be here, and we're glad to share it.\n\nHeading to OC this summer? We'd love to have you. Link in bio.\n\n**Hashtags:**\n#GoldenHour #OceanCityMD #BeachSunset #OCMaryland #OceanCityBoardwalk #BeachVibes #MarylandBeach #CoastalLife #SummerEvening #OceanLodge #BeachLife #OceanCity #SunsetBeach\n\n---\n\n### POST 12\n**Platform:** Instagram + Facebook\n**Format:** Single image \u2014 direct booking push (strong CTA)\n**Posting time:** Saturday 11:00 AM ET\n\n**Caption:**\nThe boardwalk is calling.\n\nOcean Lodge has three properties, all within easy walking distance of the beach. Fully equipped kitchens. Free parking. Real people you can actually call.\n\nBook direct at oceanlodgeocmd.com \u2192 save 10% vs. any third-party site \u2192 start planning.\n\nSee you this summer. \ud83c\udf0a\n\n**Hashtags:**\n#OceanCityMD #OceanLodge #BookDirect #BeachVacation #OCMaryland #SummerPlanning #OceanCityBoardwalk #BeachHotel #DirectBooking #FamilyTravel #MarylandBeach #MDVacation #SummerTrip\n\n---\n\n## Format Compliance Check\n\n| # | Platform | Caption chars | Hashtag count | All fields? |\n|---|----------|--------------|---------------|-------------|\n| 1 | IG + FB | ~540 | 13 | \u2705 |\n| 2 | IG + FB | ~460 | 13 | \u2705 |\n| 3 | IG | ~380 | 13 | \u2705 |\n| 4 | IG + FB | ~520 | 13 | \u2705 |\n| 5 | IG + FB | ~530 | 13 | \u2705 |\n| 6 | IG + FB | ~460 | 13 | \u2705 |\n| 7 | IG | ~340 | 13 | \u2705 |\n| 8 | IG + FB | ~450 | 12 | \u2705 |\n| 9 | IG + FB | ~390 | 12 | \u2705 |\n| 10 | IG + FB | ~470 | 13 | \u2705 |\n| 11 | IG + FB | ~430 | 13 | \u2705 |\n| 12 | IG + FB | ~330 | 13 | \u2705 |\n\nAll captions well under 2,200 characters. All hashtag sets 12\u201313 tags (within 10\u201315 range).\n\n---\n\n*End of Month 1 calendar. 12 posts ready. Content mix: 3\u00d7 location/boardwalk, 2\u00d7 direct booking CTA, 2\u00d7 property showcase individual, 1\u00d7 group property intro, 1\u00d7 Mallard feature, 1\u00d7 review highlight, 1\u00d7 behind-the-scenes, 1\u00d7 special offer.*\n"
         }
       ],
-      "blockers": [
-        "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences."
-      ]
+      "blockers": []
     },
     {
       "id": "oc-downtown-adventures",
@@ -405,119 +403,112 @@
       "project": "Ocean Lodge",
       "type": "review",
       "description": "GBP content optimization \u2014 description, amenity tags, Q&A \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.489102+00:00"
+      "waitingSince": "2026-03-13T20:06:30.502327+00:00"
     },
     {
       "taskId": "OL-004",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Review response drafts \u2014 batch 1 \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.489645+00:00"
+      "waitingSince": "2026-03-13T20:06:30.502786+00:00"
     },
     {
       "taskId": "OL-005",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Website content outline + sitemap \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.489844+00:00"
-    },
-    {
-      "taskId": "OL-007",
-      "project": "Ocean Lodge",
-      "type": "blocked",
-      "description": "StayNTouch meeting not yet scheduled. PMS now confirmed: StayNTouch (North + South), ipms247 (Mallard \u2014 no public API, email-parse workaround needed). Still need trigger points / webhook access before drafting sequences.",
-      "waitingSince": "2026-03-13T19:05:02.489907+00:00"
+      "waitingSince": "2026-03-13T20:06:30.502970+00:00"
     },
     {
       "taskId": "OL-008",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Front desk QR card design \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.490104+00:00"
+      "waitingSince": "2026-03-13T20:06:30.503220+00:00"
     },
     {
       "taskId": "OL-009",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Staff review request script \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.490218+00:00"
+      "waitingSince": "2026-03-13T20:06:30.503329+00:00"
     },
     {
       "taskId": "OL-010",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Social content calendar \u2014 month 1 \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.490381+00:00"
+      "waitingSince": "2026-03-13T20:06:30.503485+00:00"
     },
     {
       "taskId": "OCDA-004",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "GBP optimization plan \u2014 both entities \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.490759+00:00"
+      "waitingSince": "2026-03-13T20:06:30.503844+00:00"
     },
     {
       "taskId": "OCDA-006",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Website copy fixes \u2014 brand name + meta + headings \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.490930+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504014+00:00"
     },
     {
       "taskId": "OCDA-007",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Content calendar \u2014 Month 1 (Instagram + TikTok) \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491136+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504205+00:00"
     },
     {
       "taskId": "OCDA-008",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Backlink opportunity list \u2014 Tier 1 quick wins \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491318+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504390+00:00"
     },
     {
       "taskId": "OCDA-009",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Review velocity strategy \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491485+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504553+00:00"
     },
     {
       "taskId": "OCDA-010",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "jetskirentaloceancity.com domain strategy \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491606+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504668+00:00"
     },
     {
       "taskId": "OCDA-011",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Waiting on Mahdi to grant Google Ads access to tyler@baysideai.co",
-      "waitingSince": "2026-03-13T19:05:02.491635+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504696+00:00"
     },
     {
       "taskId": "OCDA-012",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Michael meeting happened Fri 10:30 AM \u2014 Tyler got **Content Editor + Reporting** access only. Need **Administrator** for Code Injection (GA4, Meta Pixel, schema) and Settings (title tags, meta descriptions). Tyler needs to ask Michael to bump to Administrator. Responded in Discord 1:00 PM Fri.",
-      "waitingSince": "2026-03-13T19:05:02.491659+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504719+00:00"
     },
     {
       "taskId": "OCDA-014",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Digital waiver system \u2014 full build (6 steps) \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491728+00:00"
+      "waitingSince": "2026-03-13T20:06:30.504788+00:00"
     },
     {
       "taskId": "OCDA-015",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Draft waiver legal text \u2014 Maryland watersports template \u2014 ready for review",
-      "waitingSince": "2026-03-13T19:05:02.491964+00:00"
+      "waitingSince": "2026-03-13T20:06:30.505016+00:00"
     }
   ]
 }
