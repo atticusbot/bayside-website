@@ -495,18 +495,21 @@
     .modal-desc { font-size: 15px; line-height: 1.7; color: var(--text-muted); margin-bottom: 24px; }
 
     /* ── Photo Reel ─────────────────────────────────── */
-    .photo-reel { position: relative; margin-bottom: 24px; }
+    .photo-reel { position: relative; margin-bottom: 24px; overflow: hidden; }
+    @keyframes reel-marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
     .photo-reel-track {
       display: flex; gap: 10px;
-      overflow-x: auto; scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      padding-bottom: 4px;
+      width: max-content;
+      animation: reel-marquee 20s linear infinite;
     }
-    .photo-reel-track::-webkit-scrollbar { display: none; }
+    .photo-reel:hover .photo-reel-track {
+      animation-play-state: paused;
+    }
     .photo-slide {
-      flex: 0 0 48%; aspect-ratio: 4/3;
-      scroll-snap-align: start;
+      flex: 0 0 220px; aspect-ratio: 4/3;
       background: var(--cream); border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; color: var(--text-muted);
@@ -1363,59 +1366,17 @@
       if (hash && MODAL_MAP[hash]) openModal(MODAL_MAP[hash]);
     })();
 
-    // ── Photo Reel ───────────────────────────────────
+    // ── Photo Reel — seamless marquee ───────────────
     document.querySelectorAll('.photo-reel').forEach(reel => {
       const track = reel.querySelector('.photo-reel-track');
-      const hasImages = reel.querySelector('.photo-slide img');
-
-      // Hide prev/next/dots — not needed for scroll-snap reels
       reel.querySelectorAll('.reel-btn, .reel-dots').forEach(e => e.style.display = 'none');
 
-      if (!hasImages) return; // placeholder reels — nothing to do
+      const hasImages = track.querySelector('.photo-slide img');
+      if (!hasImages) return; // placeholder — no animation needed
 
-      // Gentle auto-scroll for desktop (1px every 30ms = ~33px/sec)
-      let autoScrollInterval = null;
-      let isPaused = false;
-
-      function startAutoScroll() {
-        if (autoScrollInterval) return;
-        autoScrollInterval = setInterval(() => {
-          if (isPaused) return;
-          // If at end, snap back to start smoothly
-          if (track.scrollLeft + track.offsetWidth >= track.scrollWidth - 2) {
-            track.scrollTo({ left: 0, behavior: 'smooth' });
-          } else {
-            track.scrollLeft += 1;
-          }
-        }, 30);
-      }
-
-      function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-        autoScrollInterval = null;
-      }
-
-      // Pause on hover/touch
-      reel.addEventListener('mouseenter', () => { isPaused = true; });
-      reel.addEventListener('mouseleave', () => { isPaused = false; });
-      reel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
-      reel.addEventListener('touchend', () => {
-        setTimeout(() => { isPaused = false; }, 2000); // resume 2s after touch
-      }, { passive: true });
-
-      // Only start auto-scroll when modal opens
-      const modalOverlay = reel.closest('.modal-overlay');
-      if (modalOverlay) {
-        const observer = new MutationObserver(() => {
-          if (modalOverlay.classList.contains('open')) {
-            startAutoScroll();
-          } else {
-            stopAutoScroll();
-            track.scrollLeft = 0;
-          }
-        });
-        observer.observe(modalOverlay, { attributes: true, attributeFilter: ['class'] });
-      }
+      // Duplicate slides for seamless loop (CSS animates to -50%)
+      const origSlides = Array.from(track.querySelectorAll('.photo-slide'));
+      origSlides.forEach(s => track.appendChild(s.cloneNode(true)));
     });
 
     // ── Home Accordions (Policies / FAQ) ──────────────
