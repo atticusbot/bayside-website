@@ -105,6 +105,44 @@ export default function CaseStudyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
 
+      {/* Bayside AI Context Banner */}
+      <div className="bg-ocean-dark border-b border-bio/20 px-6 py-4 md:px-12">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-bio">
+              Bayside AI — Demo
+            </p>
+            <p className="mt-0.5 font-sans text-xs text-foam/40">
+              This is what a client case study looks like when we build it.
+            </p>
+          </div>
+          <a
+            href="https://cal.com/bayside-ai/15min"
+            className="hidden sm:inline-block rounded bg-bio/10 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-bio hover:bg-bio/20 transition-colors"
+          >
+            Get This for Your Firm →
+          </a>
+        </div>
+      </div>
+
+      {/* ═══ CLIENT SITE SIMULATION START ═══ */}
+      <div className="bg-white">
+
+      {/* Client nav bar */}
+      <nav className="border-b border-neutral-200 px-6 py-5 md:px-12">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <span className="font-mono text-sm font-semibold tracking-[0.1em] text-neutral-900 uppercase">
+            Caldwell &amp; Associates
+          </span>
+          <div className="hidden sm:flex items-center gap-8 font-mono text-xs uppercase tracking-[0.15em] text-neutral-400">
+            <span className="hover:text-neutral-900 cursor-pointer transition-colors">Work</span>
+            <span className="hover:text-neutral-900 cursor-pointer transition-colors">Studio</span>
+            <span className="text-neutral-900 border-b border-neutral-900 pb-0.5">Projects</span>
+            <span className="hover:text-neutral-900 cursor-pointer transition-colors">Contact</span>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden">
         <Image
@@ -115,16 +153,16 @@ export default function CaseStudyPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-dark via-ocean-dark/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         <div className="absolute inset-0 flex flex-col justify-end px-6 pb-16 md:px-12 md:pb-24">
           <div className="mx-auto w-full max-w-6xl">
-            <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio">
+            <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-white/60">
               Caldwell &amp; Associates Architecture
             </p>
-            <h1 className="font-mono text-display-xl font-bold text-foam">
+            <h1 className="font-mono text-display-xl font-bold text-white">
               Frankford &amp; Palmer
             </h1>
-            <p className="mt-3 font-sans text-xl text-foam/70 md:text-2xl">
+            <p className="mt-3 font-sans text-xl text-white/70 md:text-2xl">
               Adaptive Reuse — Fishtown, Philadelphia
             </p>
           </div>
@@ -132,12 +170,12 @@ export default function CaseStudyPage() {
       </section>
 
       {/* The Brief */}
-      <section className="bg-ocean-dark px-6 py-20 md:px-12 md:py-28">
+      <section className="bg-white px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+          <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
             The Brief
           </p>
-          <p className="max-w-3xl font-sans text-xl leading-relaxed text-foam/80 md:text-2xl md:leading-relaxed">
+          <p className="max-w-3xl font-sans text-xl leading-relaxed text-neutral-700 md:text-2xl md:leading-relaxed">
             A developer acquired a decommissioned 6,800 sq ft corner warehouse
             on Frankford Avenue with plans to convert it into a mixed-use
             property. The ground floor would house a neighborhood café; the upper
@@ -148,15 +186,15 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Narrative + Specs — two-column on desktop */}
-      <section className="bg-ocean-mid px-6 py-20 md:px-12 md:py-28">
+      <section className="bg-neutral-50 px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1fr_320px] lg:gap-20">
           {/* Narrative */}
           <div className="space-y-16">
             <div>
-              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
                 The Challenge
               </p>
-              <p className="font-sans text-lg leading-relaxed text-foam/70">
+              <p className="font-sans text-lg leading-relaxed text-neutral-600">
                 The existing structure had no residential-grade HVAC, plumbing,
                 or electrical. Load-bearing masonry walls limited interior
                 reconfiguration. The Philadelphia Historical Commission flagged
@@ -167,10 +205,10 @@ export default function CaseStudyPage() {
             </div>
 
             <div>
-              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
                 The Approach
               </p>
-              <p className="font-sans text-lg leading-relaxed text-foam/70">
+              <p className="font-sans text-lg leading-relaxed text-neutral-600">
                 Caldwell preserved the full brick facade and original
                 steel-frame windows on the street-facing elevations while
                 inserting floor-to-ceiling glass on the rear courtyard side. A
@@ -183,10 +221,10 @@ export default function CaseStudyPage() {
             </div>
 
             <div>
-              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+              <p className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
                 The Result
               </p>
-              <p className="font-sans text-lg leading-relaxed text-foam/70">
+              <p className="font-sans text-lg leading-relaxed text-neutral-600">
                 Delivered on budget at $1.18M. All four units leased within 30
                 days of CO at rents 12% above neighborhood comparable. The café
                 tenant signed a 5-year NNN lease. The project received a 2025
@@ -197,17 +235,17 @@ export default function CaseStudyPage() {
 
           {/* Specs Sidebar */}
           <aside className="lg:sticky lg:top-8 lg:self-start">
-            <div className="border border-ocean-light/20 bg-ocean-dark/50 p-8">
-              <p className="mb-6 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+            <div className="border border-neutral-200 bg-white p-8">
+              <p className="mb-6 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
                 Project Details
               </p>
               <dl className="space-y-5">
                 {specs.map((spec) => (
                   <div key={spec.label}>
-                    <dt className="font-mono text-xs uppercase tracking-[0.15em] text-foam/40">
+                    <dt className="font-mono text-xs uppercase tracking-[0.15em] text-neutral-400">
                       {spec.label}
                     </dt>
-                    <dd className="mt-1 font-sans text-sm text-foam/80">
+                    <dd className="mt-1 font-sans text-sm text-neutral-700">
                       {spec.value}
                     </dd>
                   </div>
@@ -219,15 +257,15 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Image Gallery */}
-      <section className="bg-ocean-dark px-6 py-20 md:px-12 md:py-28">
+      <section className="bg-white px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-10 font-mono text-label uppercase tracking-[0.2em] text-bio/60">
+          <p className="mb-10 font-mono text-label uppercase tracking-[0.2em] text-neutral-400">
             Gallery
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {galleryImages.map((img) => (
               <figure key={img.src} className="group overflow-hidden">
-                <div className="relative aspect-[4/3] overflow-hidden bg-ocean-mid">
+                <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
                   <Image
                     src={img.src}
                     alt={img.alt}
@@ -236,7 +274,7 @@ export default function CaseStudyPage() {
                     sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
-                <figcaption className="mt-3 font-mono text-xs uppercase tracking-[0.12em] text-foam/40">
+                <figcaption className="mt-3 font-mono text-xs uppercase tracking-[0.12em] text-neutral-400">
                   {img.caption}
                 </figcaption>
               </figure>
@@ -246,19 +284,22 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Client Quote */}
-      <section className="bg-ocean-mid px-6 py-20 md:px-12 md:py-28">
+      <section className="bg-neutral-50 px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
-          <blockquote className="font-sans text-xl leading-relaxed text-foam/80 md:text-2xl md:leading-relaxed">
+          <blockquote className="font-sans text-xl leading-relaxed text-neutral-700 md:text-2xl md:leading-relaxed">
             &ldquo;We&rsquo;d been sitting on project photos for years with
             nothing to show for them online. Bayside turned each project into a
             page that actually brings in leads. Three new clients in the first
             quarter traced directly back to these case studies.&rdquo;
           </blockquote>
-          <cite className="mt-8 block font-mono text-sm not-italic text-foam/50">
+          <cite className="mt-8 block font-mono text-sm not-italic text-neutral-400">
             — James Caldwell, AIA, Principal
           </cite>
         </div>
       </section>
+
+      </div>
+      {/* ═══ CLIENT SITE SIMULATION END ═══ */}
 
       {/* CTA */}
       <section className="bg-ocean-dark px-6 py-24 md:px-12 md:py-32">
