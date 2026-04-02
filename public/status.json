@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-02T12:05:27.694945+00:00",
+  "updatedAt": "2026-04-02T13:05:49.918442+00:00",
   "projects": [
     {
       "id": "ocean-lodge",
@@ -403,119 +403,119 @@
       "project": "Ocean Lodge",
       "type": "review",
       "description": "GBP content optimization \u2014 description, amenity tags, Q&A \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.692170+00:00"
+      "waitingSince": "2026-04-02T13:05:49.915709+00:00"
     },
     {
       "taskId": "OL-004",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Review response drafts \u2014 batch 1 \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.692673+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916199+00:00"
     },
     {
       "taskId": "OL-005",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Website content outline + sitemap \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.692857+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916382+00:00"
     },
     {
       "taskId": "OL-007",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Email sequence drafts \u2014 all 3 \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.692931+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916457+00:00"
     },
     {
       "taskId": "OL-008",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Front desk QR card design \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.693127+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916646+00:00"
     },
     {
       "taskId": "OL-009",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Staff review request script \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.693239+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916753+00:00"
     },
     {
       "taskId": "OL-010",
       "project": "Ocean Lodge",
       "type": "review",
       "description": "Social content calendar \u2014 month 1 \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.693395+00:00"
+      "waitingSince": "2026-04-02T13:05:49.916906+00:00"
     },
     {
       "taskId": "OCDA-004",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "GBP optimization plan \u2014 both entities \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.693775+00:00"
+      "waitingSince": "2026-04-02T13:05:49.917271+00:00"
     },
     {
       "taskId": "OCDA-006",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Website copy fixes \u2014 brand name + meta + headings \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.693939+00:00"
+      "waitingSince": "2026-04-02T13:05:49.917437+00:00"
     },
     {
       "taskId": "OCDA-007",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Content calendar \u2014 Month 1 (Instagram + TikTok) \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694128+00:00"
+      "waitingSince": "2026-04-02T13:05:49.917631+00:00"
     },
     {
       "taskId": "OCDA-008",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Backlink opportunity list \u2014 Tier 1 quick wins \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694311+00:00"
+      "waitingSince": "2026-04-02T13:05:49.917802+00:00"
     },
     {
       "taskId": "OCDA-009",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Review velocity strategy \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694472+00:00"
+      "waitingSince": "2026-04-02T13:05:49.917960+00:00"
     },
     {
       "taskId": "OCDA-010",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "jetskirentaloceancity.com domain strategy \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694592+00:00"
+      "waitingSince": "2026-04-02T13:05:49.918075+00:00"
     },
     {
       "taskId": "OCDA-011",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Mahdi in-person meeting happened Sat Mar 14 \u2014 Google Ads access not yet confirmed. Tyler said \"I think I have ads access\" in Discord Mar 15 11:54 AM \u2014 needs to verify in MCC (ads.google.com) whether OCDA account is visible under managed accounts. Need 10-digit Customer ID to proceed.",
-      "waitingSince": "2026-04-02T12:05:27.694622+00:00"
+      "waitingSince": "2026-04-02T13:05:49.918104+00:00"
     },
     {
       "taskId": "OCDA-012",
       "project": "OC Downtown Adventures",
       "type": "blocked",
       "description": "\ud83d\udd34 Previously: Content Editor + Reporting only (not enough). Tyler said \"I have Squarespace access\" in Discord Mar 15 11:54 AM \u2014 unclear if this is Administrator level. Need **Administrator** for Code Injection (GA4, Meta Pixel, schema) and Settings (title tags, meta descriptions).",
-      "waitingSince": "2026-04-02T12:05:27.694645+00:00"
+      "waitingSince": "2026-04-02T13:05:49.918130+00:00"
     },
     {
       "taskId": "OCDA-014",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Digital waiver system \u2014 full build (6 steps) \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694712+00:00"
+      "waitingSince": "2026-04-02T13:05:49.918197+00:00"
     },
     {
       "taskId": "OCDA-015",
       "project": "OC Downtown Adventures",
       "type": "review",
       "description": "Draft waiver legal text \u2014 Maryland watersports template \u2014 ready for review",
-      "waitingSince": "2026-04-02T12:05:27.694933+00:00"
+      "waitingSince": "2026-04-02T13:05:49.918429+00:00"
     }
   ]
 }
