@@ -24,32 +24,24 @@ const steps = [
 const tiers = [
   {
     label: 'Simple',
-    price: '$99–149',
-    setup: '$250 setup',
     items: ['Missed call text-back', 'Review monitoring & alerts', 'Appointment reminders', 'Post-visit review requests'],
     color: 'border-bio/30',
     tag: 'Most popular starting point',
   },
   {
     label: 'Smart',
-    price: '$249–349',
-    setup: '$750 setup',
     items: ['Email triage + draft responses', 'Lead qualification', 'Booking follow-up sequences', 'Competitor rate monitoring'],
     color: 'border-coral/40',
     tag: 'Best ROI for service businesses',
   },
   {
     label: 'Complex',
-    price: '$449–599',
-    setup: '$1,500 setup',
     items: ['AI concierge (SMS/iMessage)', 'Dynamic pricing engine', 'Full reputation management', 'Content & social engine'],
     color: 'border-bio/30',
     tag: 'For businesses ready to scale',
   },
   {
     label: 'AI Assistant',
-    price: '$749–1,199',
-    setup: '$2,499 setup',
     items: ['Dedicated AI for your business', 'Unlimited automations', 'Connected to all your tools', 'Learns your business over time'],
     color: 'border-coral/40',
     tag: '3–4 automations = same cost',
@@ -89,8 +81,8 @@ export default function Home() {
             <span className="hidden sm:inline text-label font-mono text-bio/70 uppercase tracking-[0.15em]">[ Ocean City ]</span>
           </div>
           <div className="flex items-center gap-3">
-            <a href="#pricing" className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/70 transition-all duration-200 hover:text-bio">
-              Pricing
+            <a href="#automations" className="hidden sm:block font-mono text-label font-bold uppercase tracking-[0.12em] text-foam/70 transition-all duration-200 hover:text-bio">
+              Automations
             </a>
             <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-5 py-2 text-label font-mono font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110">
               Claim Free Month
@@ -127,8 +119,8 @@ export default function Home() {
             <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-10 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 hover:shadow-[0_8px_30px_rgba(255,122,84,0.3)]">
               Claim Your Free Month →
             </button>
-            <a href="#pricing" className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
-              See Pricing
+            <a href="#automations" className="border border-bio/40 px-8 py-4 font-mono text-label font-bold uppercase tracking-[0.12em] text-bio transition-all duration-200 hover:bg-bio/10 hover:border-bio">
+              See Automations
             </a>
           </div>
           <div className="mt-4">
@@ -199,13 +191,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PRICING / SERVICES ── */}
-      <section id="pricing" className="px-6 py-24 md:py-32 bg-ocean-mid">
+      {/* ── AUTOMATIONS / SERVICES ── */}
+      <section id="automations" className="px-6 py-24 md:py-32 bg-ocean-mid">
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 font-mono text-label uppercase tracking-[0.2em] text-bio/60">[ 03 ]</div>
-          <h2 className="font-mono text-display-lg font-bold text-foam mb-4">Pick your automation.</h2>
+          <h2 className="font-mono text-display-lg font-bold text-foam mb-4">Pick your first automation.</h2>
           <p className="font-sans text-base text-foam/60 mb-16 max-w-xl leading-relaxed">
-            Every plan starts with a free audit to identify your highest-impact automation. First month is always free.
+            Every engagement starts with a free audit to identify the highest-impact automation for your business. First month is always free.
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {tiers.map((tier) => (
@@ -214,8 +206,7 @@ export default function Home() {
                   <div className="mb-3 font-mono text-[0.55rem] uppercase tracking-[0.2em] text-coral/80">{tier.tag}</div>
                 )}
                 <h3 className="font-mono text-lg font-bold text-foam mb-1">{tier.label}</h3>
-                <div className="font-mono text-2xl font-bold text-bio mb-1">{tier.price}<span className="text-sm text-foam/40">/mo</span></div>
-                <div className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/40 mb-6">{tier.setup} · First month free</div>
+                <div className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-foam/40 mb-6">Scoped after your free audit · First month free</div>
                 <ul className="flex flex-col gap-2 flex-1 mb-6">
                   {tier.items.map(item => (
                     <li key={item} className="flex items-start gap-2 font-sans text-sm text-foam/70">
@@ -268,7 +259,7 @@ export default function Home() {
                 { title: 'Your tools', desc: 'We connect to whatever you already use — no switching required.' },
                 { title: 'Your workflow', desc: 'Built around how your team actually operates, not a generic template.' },
                 { title: 'Fast turnaround', desc: 'Most custom automations are live within 1–2 weeks.' },
-                { title: 'Flat pricing', desc: 'Custom scope, same transparent monthly pricing. No surprise bills.' },
+                { title: 'Clear scope', desc: 'You get a simple proposal before anything paid begins. No surprise bills.' },
               ].map(item => (
                 <div key={item.title} className="bg-ocean-mid border border-bio/10 p-5">
                   <div className="h-px w-6 bg-bio/40 mb-3"/>
