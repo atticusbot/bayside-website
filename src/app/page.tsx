@@ -133,7 +133,7 @@ export default function Home() {
             No commitment · First month free · Live within a week
           </p>
           <p className="mt-3 font-mono text-sm text-foam/50">
-            Or call / text: <a href="tel:+14433735527" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">(443) 373-5527</a>
+            Or call / text: <a href="tel:+18562376143" className="underline underline-offset-4 text-bio hover:text-bio/80 transition">(856) 237-6143</a>
           </p>
         </div>
 
@@ -300,8 +300,8 @@ export default function Home() {
             <button type="button" data-cal-link="bayside-ai/30min" data-cal-config={JSON.stringify({layout:"popup_widget"})} className="bg-coral px-8 py-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-ocean-dark transition-all duration-200 hover:brightness-110 text-center">
               Claim Free Month
             </button>
-            <a href="tel:+14433735527" className="font-mono text-sm text-foam/60 text-center hover:text-bio transition self-center">
-              (443) 373-5527
+            <a href="tel:+18562376143" className="font-mono text-sm text-foam/60 text-center hover:text-bio transition self-center">
+              (856) 237-6143
             </a>
           </div>
         </div>
@@ -401,8 +401,8 @@ export default function Home() {
             <a href="mailto:tyler@baysideai.co" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
               tyler@baysideai.co
             </a>
-            <a href="tel:+14433735527" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
-              (443) 373-5527
+            <a href="tel:+18562376143" className="font-mono text-xs text-foam/35 underline underline-offset-4 transition hover:text-bio/70">
+              (856) 237-6143
             </a>
           </div>
         </div>
