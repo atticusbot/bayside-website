@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -10,9 +10,10 @@ const fraunces = Fraunces({
   axes: ['SOFT', 'WONK', 'opsz'],
 })
 
-const inter = Inter({
+const plexSans = IBM_Plex_Sans({
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-plex-sans',
   display: 'swap',
 })
 
@@ -82,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${plexSans.variable}`}>
       <body className="font-sans antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
         {children}
