@@ -97,6 +97,9 @@ export default function Home() {
           There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says &quot;Morning, boys. How&apos;s the water?&quot; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes &quot;What the hell is water?&quot; - David Foster Wallace
         </blockquote>
       </section>
+      <div className="bottom-logo" aria-label="Bayside AI">
+        <Image src="/bayside-type-logo.svg" alt="Bayside AI" width={364} height={91} />
+      </div>
       <footer className="site-footer">
         <div>BAYSIDE AI</div>
         <nav aria-label="Footer">
