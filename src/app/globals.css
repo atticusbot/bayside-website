@@ -302,3 +302,67 @@ a {
     width: 100%;
   }
 }
+
+.dfw-quote {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 0 22px 84px;
+  text-align: center;
+}
+
+.dfw-quote blockquote {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 18px;
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 28px 22px 36px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 16px;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer div:last-child {
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .dfw-quote {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .site-footer nav {
+    flex-wrap: wrap;
+  }
+
+  .site-footer div:last-child {
+    text-align: left;
+  }
+}

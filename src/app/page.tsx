@@ -42,7 +42,7 @@ export default function Home() {
       </header>
 
       <section className="typed-hero">
-        <p className="kicker">FOR CREATIVES, THINKERS, AND DOERS, WE OFFER:</p>
+        <p className="kicker">FOR CREATIVES, THINKERS, AND DOERS:</p>
         <h1 className="type-heading hero-title">FREEDOM TO FOCUS ON WHAT YOU LOVE MOST ABOUT YOUR WORK.</h1>
         <p className="hero-copy">
           Bayside automates tasks that eat your day. What remains is more time for the judgment,
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       <section className="typed-section">
-        <h2 className="type-heading">WHAT GETS LIGHTER</h2>
+        <h2 className="type-heading">WHAT WE CAN PROVIDE:</h2>
         <ul className="typed-list">
           {outcomes.map((outcome) => (
             <li key={outcome}>{outcome}</li>
@@ -84,16 +84,28 @@ export default function Home() {
       </section>
 
       <section className="typed-close">
-        <p className="kicker">THE OFFER</p>
-        <h2 className="type-heading">SEND US THE MESS.</h2>
+        <h2 className="type-heading">{"LET'S TALK ABOUT YOUR WORK."}</h2>
         <p>
-          The website draft. The intake form. The proposal you keep rewriting. The follow-up you forget.
-          The notes no one can find. We will tell you what should become lighter first.
+          What your team is spending time on, what you want to spend time on, and where the drag is.
         </p>
         <a href="mailto:tyler@baysideai.co" className="typed-button">
           TYLER@BAYSIDEAI.CO
         </a>
       </section>
+      <section className="dfw-quote" aria-label="David Foster Wallace quote">
+        <blockquote>
+          There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says &quot;Morning, boys. How&apos;s the water?&quot; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes &quot;What the hell is water?&quot; - David Foster Wallace
+        </blockquote>
+      </section>
+      <footer className="site-footer">
+        <div>BAYSIDE AI</div>
+        <nav aria-label="Footer">
+          <a href="mailto:tyler@baysideai.co">CONTACT</a>
+          <a href="/blog">WRITING</a>
+          <a href="/">HOME</a>
+        </nav>
+        <div>OCEAN CITY, MARYLAND</div>
+      </footer>
     </main>
   )
 }
