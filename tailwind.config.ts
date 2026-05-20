@@ -4,22 +4,8 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      colors: {
-        ink: '#07111F',
-        slate: '#6A8BA8',
-        moss: {
-          DEFAULT: '#5A7D54',
-          deep: '#3D5A3A',
-        },
-        linen: '#E8EFE0',
-        paper: '#FFFFFF',
-        cream: '#F8F6F0',
-        mist: '#E5E0D5',
-        page: '#FAFAF7',
-      },
       fontFamily: {
-        serif: ['var(--font-fraunces)', 'Fraunces', 'Georgia', 'serif'],
-        sans: ['var(--font-plex-sans)', 'IBM Plex Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        sans: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       },
       fontSize: {
         'display-xl': ['clamp(2.5rem, 1.5rem + 4vw, 5rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
