@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Bayside AI',
@@ -28,29 +29,12 @@ const notes = [
   ['We leave behind working parts.', 'Pages, prompts, records, routing, drafts, reminders, and small rituals that keep doing their job.'],
 ]
 
-function ReedMark({ className = 'mark' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 120 48" aria-hidden="true">
-      <rect x="6" y="32" width="3" height="14" rx="1.5" fill="#5A7D54" />
-      <rect x="14" y="22" width="3" height="24" rx="1.5" fill="#5A7D54" />
-      <rect x="22" y="14" width="3" height="32" rx="1.5" fill="#3D5A3A" />
-      <rect x="30" y="26" width="3" height="20" rx="1.5" fill="#5A7D54" />
-      <rect x="38" y="6" width="3" height="40" rx="1.5" fill="#3D5A3A" />
-      <rect x="46" y="18" width="3" height="28" rx="1.5" fill="#5A7D54" />
-      <rect x="54" y="28" width="3" height="18" rx="1.5" fill="#5A7D54" />
-      <rect x="62" y="30" width="3" height="16" rx="1.5" fill="#5A7D54" />
-      <rect x="70" y="22" width="3" height="24" rx="1.5" fill="#5A7D54" />
-    </svg>
-  )
-}
-
 export default function Home() {
   return (
     <main className="typed-page">
       <header className="typed-header">
         <a href="/" className="typed-logo" aria-label="Bayside AI home">
-          <ReedMark />
-          <span>BAYSIDE AI</span>
+          <Image src="/bayside-type-logo.svg" alt="Bayside AI" width={364} height={91} priority />
         </a>
         <a href="mailto:tyler@baysideai.co" className="typed-link">
           WRITE
@@ -58,11 +42,11 @@ export default function Home() {
       </header>
 
       <section className="typed-hero">
-        <p className="kicker">FOR PEOPLE WHO WOULD RATHER BE DOING THE WORK</p>
+        <p className="kicker">FOR CREATIVES, THINKERS, AND DOERS, WE OFFER:</p>
         <h1 className="type-heading hero-title">FREEDOM TO FOCUS ON WHAT YOU LOVE MOST ABOUT YOUR WORK.</h1>
         <p className="hero-copy">
-          Bayside takes the repeatable work around your work and makes it quieter.
-          What remains is more time for the judgment, taste, care, and craft that only you can provide.
+          Bayside automates tasks that eat your day. What remains is more time for the judgment,
+          taste, care, and craft that only you can provide.
         </p>
       </section>
 
@@ -82,7 +66,7 @@ export default function Home() {
       </section>
 
       <section className="typed-section">
-        <h2 className="type-heading">WHAT YOU GET BACK</h2>
+        <h2 className="type-heading">WHAT GETS LIGHTER</h2>
         <ul className="typed-list">
           {outcomes.map((outcome) => (
             <li key={outcome}>{outcome}</li>

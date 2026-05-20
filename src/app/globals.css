@@ -8,7 +8,6 @@
   --paper: #ffffff;
   --ink: #080808;
   --line: rgba(8, 8, 8, 0.22);
-  --faint: rgba(8, 8, 8, 0.055);
 }
 
 html {
@@ -37,10 +36,7 @@ a {
 
 .typed-page {
   min-height: 100vh;
-  background:
-    linear-gradient(var(--faint) 1px, transparent 1px),
-    var(--paper);
-  background-size: 100% 32px;
+  background: var(--paper);
   font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
@@ -56,18 +52,14 @@ a {
 }
 
 .typed-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
+  display: block;
   text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 0.12em;
 }
 
-.mark {
-  width: 74px;
-  height: 30px;
-  flex: 0 0 auto;
+.typed-logo img {
+  display: block;
+  width: 190px;
+  height: auto;
 }
 
 .typed-link,
@@ -253,12 +245,11 @@ a {
   }
 
   .typed-logo {
-    gap: 12px;
-    font-size: 12px;
+    max-width: 190px;
   }
 
-  .mark {
-    width: 58px;
+  .typed-logo img {
+    width: 150px;
   }
 
   .typed-hero,
