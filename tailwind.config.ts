@@ -5,24 +5,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ocean: {
-          dark: '#07111f',
-          mid: '#0c1a2e',
-          light: '#1a3352',
-          mist: '#2a4a6a',
+        ink: '#07111F',
+        slate: '#6A8BA8',
+        moss: {
+          DEFAULT: '#5A7D54',
+          deep: '#3D5A3A',
         },
-        bio: {
-          DEFAULT: '#3d9eff',
-          dim: '#2a80cc',
-          faint: 'rgba(61,158,255,0.12)',
-        },
-        sand: '#c8a96e',
-        foam: '#e8f5f0',
-        coral: '#ff7a54',
+        linen: '#E8EFE0',
+        paper: '#FFFFFF',
+        cream: '#F8F6F0',
+        mist: '#E5E0D5',
+        page: '#FAFAF7',
       },
       fontFamily: {
-        mono: ['var(--font-space-mono)', 'Space Mono', 'Courier New', 'monospace'],
-        sans: ['var(--font-plus-jakarta)', 'Plus Jakarta Sans', 'sans-serif'],
+        serif: ['var(--font-fraunces)', 'Fraunces', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['clamp(2.5rem, 1.5rem + 4vw, 5rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],

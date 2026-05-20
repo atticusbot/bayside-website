@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const spaceMono = Space_Mono({
-  weight: ['400', '700'],
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-space-mono',
+  variable: '--font-fraunces',
   display: 'swap',
+  axes: ['SOFT', 'WONK', 'opsz'],
 })
 
-const plusJakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-plus-jakarta',
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -23,7 +23,7 @@ const schemaOrg = {
       "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://www.baysideai.co/#organization",
       "name": "Bayside AI",
-      "description": "AI-powered reputation management and local search visibility for independent hotels, restaurants, retail shops, and experiences on the Maryland Eastern Shore.",
+      "description": "Bayside AI builds the operational and commercial infrastructure small professional firms need to operate in a more automated economy.",
       "url": "https://www.baysideai.co",
       "email": "tyler@baysideai.co",
       "areaServed": [
@@ -35,15 +35,14 @@ const schemaOrg = {
       ],
       "address": {"@type": "PostalAddress", "addressLocality": "Ocean City", "addressRegion": "MD", "addressCountry": "US"},
       "founder": {"@type": "Person", "name": "Tyler Quigley", "email": "tyler@baysideai.co"},
-      "knowsAbout": ["AI search visibility","Generative Engine Optimization","GEO","reputation management","Google Business Profile optimization","local SEO","Ocean City MD tourism","review management","AI assistants and local search","TripAdvisor optimization","Booking.com optimization"],
+      "knowsAbout": ["professional service operations","workflow automation","website systems","proposal operations","client follow-up","firm knowledge management","local search visibility","reputation management"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Bayside AI Services",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reputation Management", "description": "Review monitoring, AI-generated owner responses, and guest sentiment analysis across Google, TripAdvisor, and Booking.com."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Local and AI Search Visibility", "description": "Google Business Profile optimization, local SEO, and Generative Engine Optimization (GEO) so your business appears in ChatGPT, Perplexity, and Google AI Overviews."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Guest Communication Automation", "description": "Pre-arrival, welcome, and follow-up email automation that drives reviews and repeat bookings."}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Free AI Visibility Audit", "description": "A complimentary 48-hour audit of your business online reputation, search rankings, and AI visibility."}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operating System Audit", "description": "A paid audit that maps workflows, market surface, firm memory, and reporting needs before implementation."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website and Workflow Systems", "description": "Connected website, intake, follow-up, reporting, and reusable firm memory for small professional firms."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Local and Reputation Systems", "description": "Local visibility, review response workflows, and follow-up systems for service businesses and hospitality operators."}}
         ]
       }
     },
@@ -59,20 +58,20 @@ const schemaOrg = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.baysideai.co"),
-  title: "Bayside AI — AI for Ocean City, MD Businesses",
-  description: "We manage your online reputation and visibility so you can focus on your guests. Built for Ocean City hotels, restaurants, shops, and experiences.",
+  title: "Bayside AI | Embedded Operating Systems for Small Professional Firms",
+  description: "Bayside builds the website, workflows, reporting, and firm memory as one connected operating layer for small professional service firms.",
   openGraph: {
-    title: "Bayside AI — AI for Ocean City, MD Businesses",
-    description: "We manage your online reputation and visibility so you can focus on your guests. Eight million tourists. One shore season. Your reputation is your season.",
+    title: "Bayside AI | Embedded Operating Systems for Small Professional Firms",
+    description: "Bayside builds the website, workflows, reporting, and firm memory as one connected operating layer.",
     type: "website",
     url: "https://www.baysideai.co",
     siteName: "Bayside AI",
-    images: [{url: "/opengraph-image", width: 1200, height: 630, alt: "Bayside AI — Your reputation is your season."}],
+    images: [{url: "/opengraph-image", width: 1200, height: 630, alt: "Bayside AI"}],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bayside AI — AI for Ocean City, MD Businesses",
-    description: "We manage your online reputation and visibility so you can focus on your guests. Your reputation is your season.",
+    title: "Bayside AI | Embedded Operating Systems for Small Professional Firms",
+    description: "Bayside builds the website, workflows, reporting, and firm memory as one connected operating layer.",
     images: ["/opengraph-image"],
   },
 };
@@ -83,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceMono.variable} ${plusJakarta.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
         {children}
@@ -106,7 +105,7 @@ export default function RootLayout({
             };
           })(window, "https://app.cal.com/embed/embed.js", "init");
           Cal("init", { origin: "https://cal.com" });
-          Cal("ui", { theme: "dark", styles: { branding: { brandColor: "#3d9eff" } } });
+          Cal("ui", { theme: "light", styles: { branding: { brandColor: "#5A7D54" } } });
         `}</Script>
       </body>
     </html>
