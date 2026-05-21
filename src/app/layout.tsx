@@ -9,7 +9,7 @@ const schemaOrg = {
       "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://www.baysideai.co/#organization",
       "name": "Bayside AI",
-      "description": "Bayside gives small firms more freedom to focus on the work they love most.",
+      "description": "Bayside helps small teams remove repeated tasks, scattered records, and dropped follow-up.",
       "url": "https://www.baysideai.co",
       "email": "tyler@baysideai.co",
       "areaServed": [
@@ -45,10 +45,10 @@ const schemaOrg = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.baysideai.co"),
   title: "Bayside AI",
-  description: "Bayside gives small firms more freedom to focus on the work they love most.",
+  description: "Bayside helps small teams remove repeated tasks, scattered records, and dropped follow-up.",
   openGraph: {
     title: "Bayside AI",
-    description: "Freedom to focus on what you love most about your work.",
+    description: "For small teams carrying too much in memory.",
     type: "website",
     url: "https://www.baysideai.co",
     siteName: "Bayside AI",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bayside AI",
-    description: "Freedom to focus on what you love most about your work.",
+    description: "For small teams carrying too much in memory.",
     images: ["/opengraph-image"],
   },
 };

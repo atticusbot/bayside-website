@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const metadata: Metadata = {
   title: 'Bayside AI',
   description:
-    'Bayside gives small firms more freedom to focus on the work they love most.',
+    'Bayside helps small teams remove repeated tasks, scattered records, and dropped follow-up.',
 }
 
 const manifesto = [
@@ -42,11 +42,11 @@ export default function Home() {
       </header>
 
       <section className="typed-hero">
-        <p className="kicker">FOR CREATIVES, THINKERS, AND DOERS:</p>
+        <p className="kicker">FOR SMALL TEAMS CARRYING TOO MUCH IN MEMORY:</p>
         <h1 className="type-heading hero-title">FREEDOM TO FOCUS ON WHAT YOU LOVE MOST ABOUT YOUR WORK.</h1>
         <p className="hero-copy">
-          Bayside automates tasks that eat your day. What remains is more time for the judgment,
-          taste, care, and craft that only you can provide.
+          Bayside removes repeated tasks, scattered records, and dropped follow-up. What remains is
+          more time for the judgment, taste, care, and craft that only you can provide.
         </p>
       </section>
 
