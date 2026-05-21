@@ -6,20 +6,16 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@type": "ProfessionalService",
       "@id": "https://www.baysideai.co/#organization",
       "name": "Bayside AI",
       "description": "Bayside helps small teams remove repeated tasks, scattered records, and dropped follow-up.",
       "url": "https://www.baysideai.co",
       "email": "tyler@baysideai.co",
       "areaServed": [
-        {"@type": "City", "name": "Ocean City", "addressRegion": "MD", "addressCountry": "US"},
-        {"@type": "AdministrativeArea", "name": "Maryland Eastern Shore"},
-        {"@type": "City", "name": "Ocean Pines", "addressRegion": "MD"},
-        {"@type": "City", "name": "Berlin", "addressRegion": "MD"},
-        {"@type": "City", "name": "Fenwick Island", "addressRegion": "DE"}
+        {"@type": "City", "name": "Philadelphia", "addressRegion": "PA", "addressCountry": "US"},
+        {"@type": "City", "name": "Washington", "addressRegion": "DC", "addressCountry": "US"}
       ],
-      "address": {"@type": "PostalAddress", "addressLocality": "Ocean City", "addressRegion": "MD", "addressCountry": "US"},
       "founder": {"@type": "Person", "name": "Tyler Quigley", "email": "tyler@baysideai.co"},
       "knowsAbout": ["websites","follow-up","intake","firm records","local visibility","reputation"],
       "hasOfferCatalog": {

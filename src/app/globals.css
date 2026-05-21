@@ -62,11 +62,10 @@ a {
   height: auto;
 }
 
-.typed-link,
-.typed-button {
-  border: 1px solid var(--ink);
-  background: var(--paper);
-  color: var(--ink);
+.typed-link {
+  border: none;
+  background: #5A7D54;
+  color: #ffffff;
   display: inline-flex;
   justify-content: center;
   padding: 12px 16px;
@@ -75,10 +74,29 @@ a {
   letter-spacing: 0.14em;
 }
 
-.typed-link:hover,
+.typed-link:hover {
+  background: #4a6b44;
+  color: #ffffff;
+}
+
+.typed-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #5A7D54;
+  color: #ffffff;
+  padding: 18px 28px;
+  text-decoration: none;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+
 .typed-button:hover {
-  background: var(--ink);
-  color: var(--paper);
+  background: #4a6b44;
+  color: #ffffff;
 }
 
 .typed-hero,
@@ -87,16 +105,19 @@ a {
 .manifesto-shell {
   width: min(100%, 980px);
   margin: 0 auto;
-  padding: 76px 22px;
+  padding: 60px 22px;
 }
 
 .typed-hero {
   padding-top: 108px;
-  padding-bottom: 84px;
+  padding-bottom: 30px;
+  padding-left: 22px;
+  padding-right: 22px;
+  overflow: hidden;
 }
 
 .kicker {
-  margin: 0 0 24px;
+  margin: 0 0 64px;
   font-size: 12px;
   letter-spacing: 0.16em;
   line-height: 1.7;
@@ -125,7 +146,7 @@ a {
 
 .hero-copy {
   max-width: 700px;
-  margin: 54px 0 0;
+  margin: 96px 0 0;
   font-size: 15px;
   line-height: 2;
 }
@@ -274,7 +295,7 @@ a {
   }
 
   .hero-copy {
-    margin-top: 42px;
+    margin-top: 72px;
   }
 
   .manifesto-dialog {
@@ -304,9 +325,10 @@ a {
 }
 
 .dfw-quote {
-  width: min(100%, 760px);
-  margin: 0 auto;
-  padding: 0 22px 84px;
+  width: min(100%, 620px);
+  margin: 0 auto 84px;
+  padding: 28px 28px 24px;
+  border: 1px solid var(--line);
   text-align: center;
 }
 
@@ -314,6 +336,15 @@ a {
   margin: 0;
   font-size: 12px;
   line-height: 1.9;
+}
+
+.dfw-quote cite {
+  display: block;
+  margin-top: 16px;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
 }
 
 .bottom-logo {
@@ -360,8 +391,7 @@ a {
 
 @media (max-width: 760px) {
   .dfw-quote {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 22px 18px 18px;
   }
 
   .site-footer {
@@ -377,5 +407,156 @@ a {
 
   .site-footer div:last-child {
     text-align: left;
+  }
+}
+
+.skill-library-stub {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 22px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.skill-library-stub .type-heading {
+  font-size: clamp(24px, 3.6vw, 44px);
+}
+
+.skill-library-stub p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Skills Library page */
+.skills-hero {
+  padding-bottom: 60px;
+}
+
+.skills-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 44px;
+}
+
+.skills-input {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  outline: none;
+}
+
+.skills-input:focus {
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+.skills-input::placeholder {
+  opacity: 0.4;
+}
+
+.skills-input:disabled {
+  opacity: 0.6;
+}
+
+.skills-submit {
+  margin-top: 0;
+}
+
+.skills-form-success {
+  margin-top: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+.skills-form-error {
+  width: 100%;
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #c0392b;
+}
+
+.skills-form-error a {
+  color: inherit;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  margin-top: 48px;
+}
+
+.skills-card {
+  background: var(--paper);
+  padding: 36px 28px 40px;
+}
+
+.skills-card-heading {
+  font-size: clamp(15px, 1.9vw, 22px);
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+.skills-card p {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.skills-guardrail {
+  max-width: 680px;
+  margin-top: 48px;
+}
+
+.skills-guardrail p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.skills-guardrail p:last-child {
+  margin-bottom: 0;
+}
+
+.skills-guardrail-note {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+@media (max-width: 760px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-form {
+    flex-direction: column;
+  }
+
+  .skills-input {
+    width: 100%;
+  }
+
+  .skills-submit {
+    width: 100%;
+    justify-content: center;
   }
 }

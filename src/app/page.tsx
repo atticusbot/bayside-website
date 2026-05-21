@@ -36,8 +36,8 @@ export default function Home() {
         <a href="/" className="typed-logo" aria-label="Bayside AI home">
           <Image src="/bayside-type-logo.svg" alt="Bayside AI" width={364} height={91} priority />
         </a>
-        <a href="mailto:tyler@baysideai.co" className="typed-link">
-          WRITE
+        <a href="https://cal.com/bayside-ai" className="typed-link" target="_blank" rel="noopener noreferrer">
+          BOOK A CALL
         </a>
       </header>
 
@@ -84,17 +84,18 @@ export default function Home() {
       </section>
 
       <section className="typed-close">
-        <h2 className="type-heading">{"LET'S TALK ABOUT YOUR WORK."}</h2>
+        <h2 className="type-heading">{"LET'S TALK."}</h2>
         <p>
           What your team is spending time on, what you want to spend time on, and where the drag is.
         </p>
-        <a href="mailto:tyler@baysideai.co" className="typed-button">
-          TYLER@BAYSIDEAI.CO
+        <a href="https://cal.com/bayside-ai" className="typed-button" target="_blank" rel="noopener noreferrer">
+          BOOK A CALL
         </a>
       </section>
       <section className="dfw-quote" aria-label="David Foster Wallace quote">
         <blockquote>
-          There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says &quot;Morning, boys. How&apos;s the water?&quot; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes &quot;What the hell is water?&quot; - David Foster Wallace
+          There are these two young fish swimming along and they happen to meet an older fish swimming the other way, who nods at them and says &quot;Morning, boys. How&apos;s the water?&quot; And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes &quot;What the hell is water?&quot;
+          <cite>David Foster Wallace</cite>
         </blockquote>
       </section>
       <div className="bottom-logo" aria-label="Bayside AI">
@@ -104,10 +105,8 @@ export default function Home() {
         <div>BAYSIDE AI</div>
         <nav aria-label="Footer">
           <a href="mailto:tyler@baysideai.co">CONTACT</a>
-          <a href="/blog">WRITING</a>
           <a href="/">HOME</a>
         </nav>
-        <div>OCEAN CITY, MARYLAND</div>
       </footer>
     </main>
   )

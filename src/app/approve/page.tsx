@@ -72,7 +72,7 @@ function ApproveForm() {
           </div>
           <div>
             <label style={label}>Property</label>
-            <input required value={property} onChange={e => setProperty(e.target.value)} placeholder="Hotel or business name" style={input} />
+            <input required value={property} onChange={e => setProperty(e.target.value)} placeholder="Business name" style={input} />
           </div>
           <div>
             <label style={{ ...label, marginBottom: '8px' }}>
