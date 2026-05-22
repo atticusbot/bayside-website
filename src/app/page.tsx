@@ -36,9 +36,9 @@ export default function Home() {
         <a href="/" className="typed-logo" aria-label="Bayside AI home">
           <Image src="/bayside-type-logo.svg" alt="Bayside AI" width={364} height={91} priority />
         </a>
-        <a href="https://cal.com/bayside-ai" className="typed-link" target="_blank" rel="noopener noreferrer">
+        <button type="button" className="typed-link" data-cal-link="bayside-ai" data-cal-config='{"layout":"month_view"}'>
           BOOK A CALL
-        </a>
+        </button>
       </header>
 
       <section className="typed-hero">
@@ -88,9 +88,9 @@ export default function Home() {
         <p>
           What your team is spending time on, what you want to spend time on, and where the drag is.
         </p>
-        <a href="https://cal.com/bayside-ai" className="typed-button" target="_blank" rel="noopener noreferrer">
+        <button type="button" className="typed-button" data-cal-link="bayside-ai" data-cal-config='{"layout":"month_view"}'>
           BOOK A CALL
-        </a>
+        </button>
       </section>
       <section className="dfw-quote" aria-label="David Foster Wallace quote">
         <blockquote>
