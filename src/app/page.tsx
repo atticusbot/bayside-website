@@ -105,6 +105,7 @@ export default function Home() {
         <div>BAYSIDE AI</div>
         <nav aria-label="Footer">
           <a href="mailto:tyler@baysideai.co">CONTACT</a>
+          <a href="/skills-library">SKILLS</a>
           <a href="/">HOME</a>
         </nav>
       </footer>
